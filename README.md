@@ -44,10 +44,7 @@ I'm an undergraduate student working at the intersection of **industrial systems
 
 | Project | Description | Stack | Status |
 |---|---|---|---|
-| Industrial EDA | Exploratory analysis on public manufacturing datasets | Python · Pandas | 🚧 In progress |
-| Demand forecasting | Time series models for inventory planning | scikit-learn · statsmodels | 📅 Planned |
-| Logistics optimizer | Route optimization with OR-Tools | Python · OR-Tools | 📅 Planned |
-| Research template | Academic LaTeX template for engineering reports | LaTeX | 📅 Planned |
+| Research template | Academic LaTeX template for engineering reports | LaTeX | 🚧 In progress |
 
 ---
 
@@ -58,6 +55,6 @@ I'm an undergraduate student working at the intersection of **industrial systems
 
 ---
 
-> *"The goal is to turn data into information, and information into insight."* — Carly Fiorina
+> *"Hierba mala, nunca muere"* — Yo
 
 *Profile under active construction — every commit counts. 🚀*
