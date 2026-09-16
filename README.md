@@ -17,13 +17,14 @@
 <br>
 
 <!-- SOCIALS -->
-<a href="https://www.linkedin.com/in/jharol-vilca-ramos/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>&nbsp;&nbsp;
-<a href="https://github.com/s7ex-j"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=93A9EE" alt="GitHub"></a>&nbsp;&nbsp;
+<a href="https://instagram.com/s7ex.j"><img src="https://img.shields.io/badge/Instagram-dd2a36?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
+<a href="https://github.com/s7ex-j"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=93A9EE" alt="GitHub"></a>
 <a href="https://orcid.org/0009-0009-7897-3439"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID"></a>
+<a href="https://www.linkedin.com/in/jharol-vilca-ramos/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 
 <br>
 
-<img src="https://visitor-badge.lithub.app/api/answer?dp=s7ex-j&label=profile+views&style=flat&color=93A9EE&format=png&sl=Andre" alt="profile views">
+<img src="https://visitor-badge.lithub.app/api/answer?dp=s7ex-j&label=profile+views&style=flat&color=93A9EE" alt="profile views">
 
 </div>
 
@@ -42,15 +43,19 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 - 📊 **Daily driver**: Power BI, SQL, Python (Pandas, scikit-learn, statsmodels), DAX
 - 🧪 **Research interests**: Price-demand elasticity, ensemble stacking for sports prediction, behavioral demand drivers, causal inference
 - 📝 **Academic writing**: LaTeX (IEEE, APA 7), published on [Zenodo](https://doi.org/10.5281/zenodo.21709748) and [ResearchGate](https://www.researchgate.net/profile/Jharol-Vilca-Ramos)
-- 📚 **Currently reading**: Papers on AI ethics, decision neuroscience, environmental sustainability, legal AI — anything that lets me complicate my life a bit more.
+- 📚 **Currently reading**: Papers on AI ethics, decision neuroscience, environmental sustainability, legal AI — anything that lets me complicate mi vida un poco más.
 
 <br>
 
 <div align="center">
 
-## my perfect stack
+## 🔮 Building
 
-<img src="https://skillicons.dev/icons?i=python,sql,r,postgres,mysql,bigquery,git,docker,latex,vscode,jupyter,figma&perline=7" alt="tech stack">
+| Project | Status | Stack |
+|---|---|---|
+| `A.N.D.R.E.` | ⚡ Active | Python · XGBoost · LightGBM · Optuna |
+| `dophamine` | 🛠️ Prototyping | Python · statsmodels · behavioral economics |
+| LaTeX Templates | ✅ Maintenance | LaTeX · IEEE · APA 7 |
 
 </div>
 
@@ -58,23 +63,64 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 
 <div align="center">
 
-## signals 
+## 💡 Thinking about
+
+Right now, Andre is deep-diving into:
+- **Behavioral demand drivers** — how psychology bends price elasticity
+- **Causal inference in retail** — counterfactuals for pricing strategy  
+- **xG/football analytics** — ensemble methods for match prediction
+- **AI in legal docs** — NLP for contract analysis (side quest)
+- **Decision neuroscience** — what the brain tells us about choice
+
+<br>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=3000&pause=1500&color=6366F7&center=true&vCenter=true&width=600&lines=Currently:+pricing+models+vs+behavioral+biases;Next:+causal+inference+in+football+analytics;Reading:+decision+neuroscience+papers" alt="thinking">
+
+</div>
+
+---
+
+<div align="center">
+
+## my perfect stack
+
+<img src="https://img.icons8.com/?size=50&id=9mNsAwXxmM0W&icon=python&name=python" alt="python" width="50" height="50">
+<img src="https://img.icons8.com/?size=50&id=9mNsAwXxmM0W&icon=sql&name=sql" alt="sql" width="50" height="50">
+<img src="https://img.icons8.com/?size=50&id=9mNsAwXxmM0W&icon=r&name=r" alt="r" width="50" height="50">
+<img src="https://img.icons8.com/?size=50&id=9mNsAwXxmM0W&icon=power-bi&name=powerbi" alt="powerbi" width="50" height="50">
+<img src="https://img.icons8.com/?size=50&id=9mNsAwXxmM0W&icon=postgres&name=postgres" alt="postgres" width="50" height="50">
+<img src="https://img.icons8.com/?size=50&id=9mNsAwXxmM0W&icon=docker&name=docker" width="50" height="50">
+<img src="https://img.icons8.com/?size=50&id=9mNsAwXxmM0W&icon=latex&name=latex" alt="latex" width="50" height="50">
+
+</div>
+
+---
+
+<div align="center">
+
+## 🧩 Skillset Radar
 
 <table>
 <tr>
 <td width="50%" align="center" valign="middle">
-  <picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="assets/radar-dark.svg">
-    <source media="(prefers-color-scheme: light)"  srcset="assets/radar-light.svg">
-    <img src="assets/radar-dark.svg" width="400" alt="skill radar chart">
-  </picture>
+
+<!-- Self-rated radar - edit assets/skills.json -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/radar-dark.svg">
+  <source media="(prefers-color-scheme: light)"  srcset="assets/radar-light.svg">
+  <img src="assets/radar-dark.svg" width="400" alt="skill radar chart">
+</picture>
+
 </td>
 <td width="50%" align="center" valign="middle">
-  <picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="assets/radar-langs-dark.svg">
-    <source media="(prefers-color-scheme: light)"  srcset="assets/radar-langs-light.svg">
-    <img src="assets/radar-langs-dark.svg" width="400" alt="language radar chart">
-  </picture>
+
+<!-- Language mix radar - edit assets/langmix.json -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/radar-langs-dark.svg">
+  <source media="(prefers-color-scheme: light)"  srcset="assets/radar-langs-light.svg">
+  <img src="assets/radar-langs-dark.svg" width="400" alt="language radar chart">
+</picture>
+
 </td>
 </tr>
 </table>
@@ -85,9 +131,9 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 
 <div align="center">
 
-## Numbers matter? ohhh yes. 
+## 📊 Pulse
 
-<!-- Generated by scripts/cards.py into this repo. -->
+<!-- Generated by scripts/cards.py - no external dependencies -->
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="assets/card-stats-dark.svg">
   <source media="(prefers-color-scheme: light)"  srcset="assets/card-stats-light.svg">
@@ -108,30 +154,39 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 
 <div align="center">
 
-## featured work
+## 🌟 Featured Work
 
 <table>
 <tr>
 <td width="33%" align="center" valign="top">
-  <picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="assets/card-repo-0-dark.svg">
-    <source media="(prefers-color-scheme: light)"  srcset="assets/card-repo-0-light.svg">
-    <img src="assets/card-repo-0-dark.svg" width="300" alt="A.N.D.R.E.">
-  </picture>
+
+<!-- Repo card 0 -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/card-repo-0-dark.svg">
+  <source media="(prefers-color-scheme: light)"  srcset="assets/card-repo-0-light.svg">
+  <img src="assets/card-repo-0-dark.svg" width="300" alt="A.N.D.R.E.">
+</picture>
+
 </td>
 <td width="33%" align="center" valign="top">
-  <picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="assets/card-repo-1-dark.svg">
-    <source media="(prefers-color-scheme: light)"  srcset="assets/card-repo-1-light.svg">
-    <img src="assets/card-repo-1-dark.svg" width="300" alt="dophamine">
-  </picture>
+
+<!-- Repo card 1 -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/card-repo-1-dark.svg">
+  <source media="(prefers-color-scheme: light)"  srcset="assets/card-repo-1-light.svg">
+  <img src="assets/card-repo-1-dark.svg" width="300" alt="dophamine">
+</picture>
+
 </td>
 <td width="33%" align="center" valign="top">
-  <picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="assets/card-repo-2-dark.svg">
-    <source media="(prefers-color-scheme: light)"  srcset="assets/card-repo-2-light.svg">
-    <img src="assets/card-repo-2-dark.svg" width="300" alt="Plantillas-LaTeX">
-  </picture>
+
+<!-- Repo card 2 -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/card-repo-2-dark.svg">
+  <source media="(prefers-color-scheme: light)"  srcset="assets/card-repo-2-light.svg">
+  <img src="assets/card-repo-2-dark.svg" width="300" alt="Plantillas-LaTeX">
+</picture>
+
 </td>
 </tr>
 </table>
@@ -142,10 +197,10 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 
 <div align="center">
 
-## words
+## 📚 Words
 
 [Zenodo — Price-Demand Elasticity Paper](https://doi.org/10.5281/zenodo.21709748)  
-[ResearchGate — Jharol Vilca Ramos](https://www.researchgate.net/profile/Jharol-Vilca-Ramos)  
+[ResearchGate — Andre](https://www.researchgate.net/profile/Jharol-Vilca-Ramos)  
 LaTeX templates for academic writing
 
 </div>
@@ -154,28 +209,21 @@ LaTeX templates for academic writing
 
 <div align="center">
 
-## now
+## 🎯 Now
 
-Finishing <code>A.N.D.R.E.</code> — World Cup 2026 predictor (v2)  
+Finishing `A.N.D.R.E.` — World Cup 2026 predictor (v2)  
 Writing LaTeX templates for data science reports  
-Reading: papers on AI ethics, decision neuroscience, environmental sustainability, legal AI
+Reading: decision neuroscience + behavioral economics papers  
+Experimenting with causal ML for pricing recommendations  
 
 </div>
 
 ---
 
-<div align="center">
-
-## contact
-
-<a href="https://instagram.com/s7ex.j"><img src="https://img.shields.io/badge/Instagram-dd2a36?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
-
-</div>
-
----
+<img src="assets/avatar.jpg" align="right" width="180px" style="border-radius: 16px; margin: 0 0 16px 16px;" alt="avatar">
 
 <div align="center">
 
-<sub>` Build with Python · SVG · GitHub Actions · @s7ex-j `</sub>
+<sub>` Built with Python · SVG · GitHub Actions · @s7ex-j `</sub>
 
 </div>
