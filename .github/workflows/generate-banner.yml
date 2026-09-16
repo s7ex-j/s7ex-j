@@ -1,0 +1,33 @@
+name: Generar banner de terminal
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'   # cada lunes a las 08:00 UTC
+  workflow_dispatch:        # permite lanzarlo manualmente desde la pestaña Actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Instalar dependencias Python
+        run: pip install --upgrade github-readme-terminal ascii_magic
+
+      - name: Generar GIF
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate_terminal.py
+
+      - name: Commitear el GIF actualizado
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: actualizar banner de terminal"
+          file_pattern: "assets/*.gif"
