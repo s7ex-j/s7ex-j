@@ -1,0 +1,17 @@
+[
+  {
+    "repo": "A.N.D.R.E.",
+    "title": "A.N.D.R.E. — World Cup 2026 Stacking Predictor",
+    "description": "Ensemble stacking (XGBoost, LightGBM, CatBoost, Random Forest) for football match prediction. Elo ratings, xG, transfer market features. Optuna + walk-forward validation."
+  },
+  {
+    "repo": "dophamine",
+    "title": "dophamine — Behavioral Economics Toolkit",
+    "description": "Toolkit for behavioral economics research: demand analysis, elasticity estimation, and decision-making models. Statistical utilities for experimental economics."
+  },
+  {
+    "repo": "Plantillas-LaTeX",
+    "title": "Plantillas-LaTeX — Academic Writing Templates",
+    "description": "LaTeX templates for academic writing following IEEE and APA 7 standards. Includes thesis, paper, and presentation templates."
+  }
+]

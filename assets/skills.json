@@ -1,0 +1,15 @@
+{
+  "title": "Core Skills",
+  "description": "Self-rated proficiency across key domains (0-100)",
+  "subtitle": "Updated 2025 · Self-assessed",
+  "categories": [
+    { "name": "Python", "value": 88, "color": "#3776AB" },
+    { "name": "SQL", "value": 85, "color": "#4479A1" },
+    { "name": "R", "value": 75, "color": "#276DC3" },
+    { "name": "Power BI", "value": 82, "color": "#F2C811" },
+    { "name": "Data Modeling", "value": 80, "color": "#10B981" },
+    { "name": "Econometrics", "value": 78, "color": "#8B5CF6" },
+    { "name": "ML / Stacking", "value": 72, "color": "#F59E0B" },
+    { "name": "Visualization", "value": 76, "color": "#EC4899" }
+  ]
+}

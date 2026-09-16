@@ -1,0 +1,15 @@
+{
+  "title": "Language & Stack Mix",
+  "description": "Relative weight of languages & frameworks in recent work (bytes)",
+  "subtitle": "Aggregated from GitHub repos · Auto-updated",
+  "categories": [
+    { "name": "Python", "value": 420000 },
+    { "name": "SQL", "value": 180000 },
+    { "name": "R", "value": 95000 },
+    { "name": "DAX / M", "value": 65000 },
+    { "name": "LaTeX", "value": 48000 },
+    { "name": "JavaScript", "value": 35000 },
+    { "name": "TypeScript", "value": 28000 },
+    { "name": "Dockerfile", "value": 12000 }
+  ]
+}

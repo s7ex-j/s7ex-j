@@ -1,65 +1,181 @@
-![terminal](https://raw.githubusercontent.com/s7ex-j/s7ex-j/main/assets/terminal-banner.gif)
+<div align="center">
 
-# 👋 Hola, soy Jharol
+<!-- BANNER -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/banner-dark.svg">
+  <source media="(prefers-color-scheme: light)"  srcset="assets/banner-light.svg">
+  <img src="assets/banner-dark.svg" width="100%" alt="profile.sh --live">
+</picture>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=93A9EE&center=true&vCenter=true&width=600&lines=Ingenier%C3%ADa+Industrial+%2B+Ciencia+de+Datos;Analista+de+Datos+Junior+%2F+BI;SQL+%2B+Power+BI+%2B+Python)](https://github.com/s7ex-j)
+<br>
 
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=s7ex-j&show_icons=true&theme=dracula&hide_border=true)
+<!-- NAME / TAGLINE -->
+<a href="https://github.com/s7ex-j">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=2600&pause=900&color=93A9EE&center=true&vCenter=true&width=880&lines=Andre+-+Data+Analyst+Jr;Elasticity+·+Stacking+·+Power+BI+·+SQL;Building+here+since+Forever" alt="typing banner">
+</a>
 
----
+<br>
 
-## 🎯 Sobre mí
+<!-- SOCIALS -->
+<a href="https://www.linkedin.com/in/jharol-vilca-ramos/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>&nbsp;&nbsp;
+<a href="https://github.com/s7ex-j"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=93A9EE" alt="GitHub"></a>&nbsp;&nbsp;
+<a href="https://orcid.org/0009-0009-7897-3439"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID"></a>
 
-- **Rol objetivo:** Analista de Datos Junior / Practicante BI
-- **Carreras:** Ingeniería Industrial (UPN, 4to ciclo) + Ciencia de Datos e IA (ISIL, 2do ciclo)
-- **Ubicación:** Lima, Perú
-- **ORCID:** [0009-0009-7897-3439](https://orcid.org/0009-0009-7897-3439)
+<br>
 
-## 🛠️ Stack Tecnológico
+<img src="https://komarev.com/ghpvc/?username=s7ex-j&style=flat&color=93A9EE&label=profile+views" alt="profile views">
 
-| Categoría | Tecnologías |
-|-----------|-------------|
-| **Lenguajes** | Python, SQL, R |
-| **Datos & BI** | Power BI, Pandas, NumPy, scikit-learn, statsmodels |
-| **Visualización** | Matplotlib, Seaborn, Plotly, Power BI |
-| **Herramientas** | Git, LaTeX, Jupyter, VS Code, Docker |
-| **Cloud/DB** | PostgreSQL, MySQL, BigQuery (básico) |
-
----
-
-## 🚀 Proyectos Destacados
-
-### 📦 demanda-delivery-v2 — Análisis de Elasticidad Precio-Demanda
-> **Stack:** Python, SQL, Power BI, econometría (IV/2SLS, Panel FE, Quantile Regression)
-- Estimación de elasticidades precio-demanda en delivery de comidas usando variables instrumentales
-- Modelo de efectos fijos + control function + regresión cuantílica para heterogeneidad
-- Dashboard ejecutivo en Power BI con recomendaciones de pricing por categoría
-- Validación con bootstrap, placebos temporales y tests de diagnóstico (RESET, Sargan, Wu-Hausman)
-
-### ⚽ A.N.D.R.E. — Stacking para Predicción Mundial 2026
-> **Stack:** Python, stacking de 4 modelos (XGBoost, LightGBM, CatBoost, Random Forest), Optuna
-- Ensemble stacking para predicción de resultados de fútbol (clasificación multinomial)
-- Feature engineering avanzado: Elo ratings, forma reciente, xG, mercado de fichajes
-- Optimización de hiperparámetros con Optuna + validación temporal walk-forward
-- Target: Mundial 2026 — predicción de campeón, fase de grupos y knockout
-
-### 📊 Informe Técnico Parque Kennedy
-> **DOI:** [10.5281/zenodo.21709748](https://doi.org/10.5281/zenodo.21709748)
-- Análisis de afluencia y patrones de uso del espacio público
-- Publicado en Zenodo con licenciamiento abierto
+</div>
 
 ---
 
-## 📈 GitHub Stats
+## This is me :)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=s7ex-j&layout=compact&theme=dracula&hide_border=true)
+Hi, I'm **Andre**, double-degree student in Industrial Engineering and Data Science, broadcasting from Lima, Perú 🇵🇪.
+I build models and dashboards that turn messy operational data into pricing decisions and forecasts — mostly at the intersection of econometrics and machine learning.
+
+I'm a restless reader: I devour papers on AI fairness, behavioral economics, psychology of decision-making, environmental engineering, legal informatics, and fitness science — whatever catches my attention today.
+
+- 🎓 **Student**: Industrial Engineering + Data Science (dual track)
+- 📍 **Based in**: Lima, Perú
+- 🏢 **Target role**: Analista de Datos Junior / Practicante BI
+- 📊 **Daily driver**: Power BI, SQL, Python (Pandas, scikit-learn, statsmodels), DAX
+- 🧪 **Research interests**: Price-demand elasticity, ensemble stacking for sports prediction, behavioral demand drivers, causal inference
+- 📝 **Academic writing**: LaTeX (IEEE, APA 7), published on [Zenodo](https://doi.org/10.5281/zenodo.21709748) and [ResearchGate](https://www.researchgate.net/profile/Jharol-Vilca-Ramos)
+- 📚 **Currently reading**: Papers on AI ethics, decision neuroscience, environmental sustainability, legal AI — anything that lets me complicate my life a bit more.
+
+<br>
+
+<div align="center">
+
+## my perfect stack
+
+<img src="https://skillicons.dev/icons?i=python,sql,r,postgres,mysql,bigquery,git,docker,latex,vscode,jupyter,powerbi&perline=7" alt="tech stack">
+
+</div>
 
 ---
 
-## 📫 Conecta conmigo
+<div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/jharol-vilca-ramos)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/s7ex-j)
-[![ORCID](https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0009-7897-3439)
+## signals 
+
+<table>
+<tr>
+<td width="50%" align="center" valign="middle">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"  srcset="assets/radar-dark.svg">
+    <source media="(prefers-color-scheme: light)"  srcset="assets/radar-light.svg">
+    <img src="assets/radar-dark.svg" width="400" alt="skill radar chart">
+  </picture>
+</td>
+<td width="50%" align="center" valign="middle">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"  srcset="assets/radar-langs-dark.svg">
+    <source media="(prefers-color-scheme: light)"  srcset="assets/radar-langs-light.svg">
+    <img src="assets/radar-langs-dark.svg" width="400" alt="language radar chart">
+  </picture>
+</td>
+</tr>
+</table>
+
+</div>
 
 ---
+
+<div align="center">
+
+## Numbers matter? ohhh yes. 
+
+<!-- Generated by scripts/cards.py into this repo. -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/card-stats-dark.svg">
+  <source media="(prefers-color-scheme: light)"  srcset="assets/card-stats-light.svg">
+  <img src="assets/card-stats-dark.svg" width="480" alt="GitHub statistics">
+</picture>
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/metrics.languages-dark.svg">
+  <source media="(prefers-color-scheme: light)"  srcset="assets/metrics.languages-light.svg">
+  <img src="assets/metrics.languages-dark.svg" height="165" alt="most used languages">
+</picture>
+
+</div>
+
+---
+
+<div align="center">
+
+## featured work
+
+<table>
+<tr>
+<td width="33%" align="center" valign="top">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"  srcset="assets/card-repo-0-dark.svg">
+    <source media="(prefers-color-scheme: light)"  srcset="assets/card-repo-0-light.svg">
+    <img src="assets/card-repo-0-dark.svg" width="300" alt="A.N.D.R.E.">
+  </picture>
+</td>
+<td width="33%" align="center" valign="top">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"  srcset="assets/card-repo-1-dark.svg">
+    <source media="(prefers-color-scheme: light)"  srcset="assets/card-repo-1-light.svg">
+    <img src="assets/card-repo-1-dark.svg" width="300" alt="dophamine">
+  </picture>
+</td>
+<td width="33%" align="center" valign="top">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"  srcset="assets/card-repo-2-dark.svg">
+    <source media="(prefers-color-scheme: light)"  srcset="assets/card-repo-2-light.svg">
+    <img src="assets/card-repo-2-dark.svg" width="300" alt="Plantillas-LaTeX">
+  </picture>
+</td>
+</tr>
+</table>
+
+</div>
+
+---
+
+<div align="center">
+
+## words
+
+[Zenodo — Price-Demand Elasticity Paper](https://doi.org/10.5281/zenodo.21709748)  
+[ResearchGate — Jharol Vilca Ramos](https://www.researchgate.net/profile/Jharol-Vilca-Ramos)  
+LaTeX templates for academic writing
+
+</div>
+
+---
+
+<div align="center">
+
+## now
+
+Finishing <code>A.N.D.R.E.</code> — World Cup 2026 predictor (v2)  
+Writing LaTeX templates for data science reports  
+Reading: papers on AI ethics, decision neuroscience, environmental sustainability, legal AI
+
+</div>
+
+---
+
+<div align="center">
+
+## contact
+
+✉️ jharol.vilca.ramos [at] gmail.com
+
+</div>
+
+---
+
+<div align="center">
+
+<sub>` Build with Python · SVG · GitHub Actions · @s7ex-j `</sub>
+
+</div>
