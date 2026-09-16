@@ -23,7 +23,7 @@
 
 <br>
 
-<img src="https://komarev.com/ghpvc/?username=s7ex-j&style=flat&color=93A9EE&label=profile+views" alt="profile views">
+<img src="https://visitor-badge.lithub.app/api/answer?dp=s7ex-j&label=profile+views&style=flat&color=93A9EE&format=png&sl=Andre" alt="profile views">
 
 </div>
 
@@ -50,7 +50,7 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 
 ## my perfect stack
 
-<img src="https://skillicons.dev/icons?i=python,sql,r,postgres,mysql,bigquery,git,docker,latex,vscode,jupyter,powerbi&perline=7" alt="tech stack">
+<img src="https://skillicons.dev/icons?i=python,sql,r,postgres,mysql,bigquery,git,docker,latex,vscode,jupyter,figma&perline=7" alt="tech stack">
 
 </div>
 
@@ -168,7 +168,7 @@ Reading: papers on AI ethics, decision neuroscience, environmental sustainabilit
 
 ## contact
 
-✉️ jharol.vilca.ramos [at] gmail.com
+<a href="https://instagram.com/s7ex.j"><img src="https://img.shields.io/badge/Instagram-dd2a36?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
 
 </div>
 
