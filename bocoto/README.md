@@ -96,11 +96,7 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 
 <br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/metrics.languages-dark.svg">
-  <source media="(prefers-color-scheme: light)"  srcset="assets/metrics.languages-light.svg">
-  <img src="assets/metrics.languages-dark.svg" height="165" alt="most used languages">
-</picture>
+<img src="assets/metrics.languages.svg" height="165" alt="most used languages">
 
 </div>
 
