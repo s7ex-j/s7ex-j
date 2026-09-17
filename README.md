@@ -36,7 +36,6 @@
   - [Skillset Radar](#skillset-radar)
   - [Pulse](#pulse)
   - [Featured Work](#featured-work)
-  - [Words](#words)
   
 </details>
 
@@ -168,18 +167,6 @@ Right now, Andre is deep-diving into:
 </td>
 </tr>
 </table>
-
-</div>
-
----
-
-<div align="center">
-
-## 📚 Words
-
-[Zenodo — Price-Demand Elasticity Paper](https://doi.org/10.5281/zenodo.21709748)  
-[ResearchGate — Andre](https://www.researchgate.net/profile/Jharol-Vilca-Ramos)  
-LaTeX templates for academic writing
 
 </div>
 
