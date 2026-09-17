@@ -270,6 +270,152 @@ class GitHub:
 
 # ─── Card generators ─────────────────────────────────────────────────────────
 
+PULSE_W, PULSE_H = 960, 280
+PULSE_SECTION_GAP = 24
+PULSE_CARD_RADIUS = 14
+
+def build_pulse_card(theme: str, user: dict, contrib: dict, langs: dict[str, int], repos: list[dict]) -> str:
+    """Build a unified wide Pulse card: stats + top languages + activity summary."""
+    t = THEMES[theme]
+
+    # Calculate stats
+    total_contrib = contrib.get("total", 0)
+    weeks = contrib.get("weeks", [])
+    streak = 0
+    for w in reversed(weeks):
+        if any(d.get("contributionCount", 0) > 0 for d in w.get("contributionDays", [])):
+            streak += 1
+        else:
+            break
+
+    public_repos = user.get("public_repos", 0)
+    total_stars = sum(r.get("stargazers_count", 0) for r in repos if not r.get("fork"))
+    followers = user.get("followers", 0)
+
+    # Top languages
+    total_bytes = sum(langs.values())
+    top_langs = list(langs.items())[:6]
+    max_bytes = top_langs[0][1] if top_langs else 1
+
+    # Activity: last 4 weeks contribution counts
+    recent_weeks = weeks[-4:] if weeks else []
+    week_labels = ["W-3", "W-2", "W-1", "This W"]
+    week_values = []
+    for i, w in enumerate(recent_weeks):
+        week_total = sum(d.get("contributionCount", 0) for d in w.get("contributionDays", []))
+        week_values.append(week_total)
+    # Pad if less than 4 weeks
+    while len(week_values) < 4:
+        week_values.insert(0, 0)
+
+    max_week = max(week_values) if week_values else 1
+    if max_week == 0:
+        max_week = 1
+
+    parts: list[str] = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{PULSE_W}" height="{PULSE_H}" '
+        f'viewBox="0 0 {PULSE_W} {PULSE_H}" role="img" aria-labelledby="pulse-title">',
+        f'<title id="pulse-title">GitHub Pulse</title>',
+        '<defs>',
+        '<filter id="pulse-shadow" x="-20%" y="-20%" width="140%" height="140%">'
+        f'<feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="{t["panel"]}" '
+        'flood-opacity=".35"/></filter>',
+        '<filter id="bar-glow" x="-50%" y="-50%" width="200%" height="200%">'
+        f'<feGaussianBlur stdDeviation="3" result="b"/>'
+        f'<feFlood flood-color="{t["accent"]}" flood-opacity=".4"/>'
+        '<feComposite in2="b" operator="in"/>'
+        '<feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>'
+        '</filter>',
+        '</defs>',
+        # Background card
+        f'<rect width="{PULSE_W}" height="{PULSE_H}" rx="{PULSE_CARD_RADIUS}" fill="{t["bg"]}" '
+        f'stroke="{t["line"]}" filter="url(#pulse-shadow)"/>',
+
+        # Title bar
+        f'<rect x="0" y="0" width="{PULSE_W}" height="56" rx="{PULSE_CARD_RADIUS}" '
+        f'ry="{PULSE_CARD_RADIUS}" fill="{t["panel"]}"/>',
+        # Fix bottom corners of title bar
+        f'<rect x="0" y="42" width="{PULSE_W}" height="14" fill="{t["panel"]}"/>',
+        f'<text x="24" y="37" fill="{t["title"]}" {FONT} font-size="16" font-weight="700">GitHub Pulse</text>',
+        f'<text x="{PULSE_W - 24}" y="37" text-anchor="end" fill="{t["muted"]}" {FONT} font-size="11">'
+        f'Updated {datetime.now(timezone.utc).strftime("%b %d, %Y")}</text>',
+    ]
+
+    # Three columns layout
+    col_w = (PULSE_W - 48 - 2 * PULSE_SECTION_GAP) // 3
+    col_x = [24, 24 + col_w + PULSE_SECTION_GAP, 24 + 2 * (col_w + PULSE_SECTION_GAP)]
+    content_y = 72
+    content_h = PULSE_H - 88
+
+    # ─── Column 1: Key Stats ───
+    x = col_x[0]
+    stats = [
+        ("Total Contributions", num_fmt(total_contrib)),
+        ("Current Streak", f"{streak} weeks"),
+        ("Public Repos", num_fmt(public_repos)),
+        ("Stars Received", num_fmt(total_stars)),
+        ("Followers", num_fmt(followers)),
+    ]
+
+    y = content_y
+    parts.append(f'<text x="{x}" y="{y}" fill="{t["muted"]}" {FONT} font-size="11" font-weight="600">Overview</text>')
+    y += 22
+    for label, value in stats:
+        parts.extend([
+            f'<text x="{x}" y="{y}" fill="{t["muted"]}" {FONT} font-size="12">{esc(label)}</text>',
+            f'<text x="{x + col_w - 4}" y="{y}" text-anchor="end" fill="{t["text"]}" '
+            f'{FONT} font-size="13" font-weight="600">{esc(value)}</text>',
+        ])
+        y += 28
+
+    # ─── Column 2: Top Languages ───
+    x = col_x[1]
+    y = content_y
+    parts.append(f'<text x="{x}" y="{y}" fill="{t["muted"]}" {FONT} font-size="11" font-weight="600">Top Languages</text>')
+    y += 22
+
+    bar_h = 10
+    bar_gap = 8
+    bar_max_w = col_w - 16
+
+    for lang, bytes_ in top_langs:
+        pct = bytes_ * 100 / total_bytes
+        w = max(4, int((bytes_ / max_bytes) * bar_max_w))
+        parts.extend([
+            f'<text x="{x}" y="{y + 9}" fill="{t["muted"]}" {FONT} font-size="10">{esc(lang)}</text>',
+            f'<text x="{x + col_w - 4}" y="{y + 9}" text-anchor="end" fill="{t["text"]}" '
+            f'{FONT} font-size="10" font-weight="600">{pct:.1f}%</text>',
+            f'<rect x="{x}" y="{y + 14}" width="{w}" height="{bar_h}" rx="3" '
+            f'fill="{t["accent"]}" filter="url(#bar-glow)"/>',
+            f'<rect x="{x + w}" y="{y + 14}" width="{bar_max_w - w}" height="{bar_h}" '
+            f'rx="3" fill="{t["line"]}"/>',
+        ])
+        y += bar_h + bar_gap + 12
+
+    # ─── Column 3: Recent Activity ───
+    x = col_x[2]
+    y = content_y
+    parts.append(f'<text x="{x}" y="{y}" fill="{t["muted"]}" {FONT} font-size="11" font-weight="600">Recent Activity</text>')
+    y += 22
+
+    # Mini contribution bars for last 4 weeks
+    for i, (label, val) in enumerate(zip(week_labels, week_values)):
+        w = max(2, int((val / max_week) * bar_max_w))
+        parts.extend([
+            f'<text x="{x}" y="{y + 9}" fill="{t["muted"]}" {FONT} font-size="10">{esc(label)}</text>',
+            f'<text x="{x + col_w - 4}" y="{y + 9}" text-anchor="end" fill="{t["text"]}" '
+            f'{FONT} font-size="10" font-weight="600">{num_fmt(val)}</text>',
+            f'<rect x="{x}" y="{y + 14}" width="{w}" height="{bar_h}" rx="3" '
+            f'fill="{t["accent2"]}"/>',
+            f'<rect x="{x + w}" y="{y + 14}" width="{bar_max_w - w}" height="{bar_h}" '
+            f'rx="3" fill="{t["line"]}"/>',
+        ])
+        y += bar_h + bar_gap + 12
+
+    parts.append("</svg>")
+    return "".join(parts)
+
+
 def build_stats_card(theme: str, user: dict, contrib: dict) -> str:
     total_contrib = contrib.get("total", 0)
     weeks = contrib.get("weeks", [])
@@ -382,6 +528,10 @@ def main() -> None:
         lang_svg = build_lang_card(theme, langs)
         (out_dir / f"card-lang-{theme}.svg").write_text(lang_svg, encoding="utf-8")
         print(f"  card-lang-{theme}.svg")
+
+        pulse_svg = build_pulse_card(theme, user, contrib, langs, repos)
+        (out_dir / f"card-pulse-{theme}.svg").write_text(pulse_svg, encoding="utf-8")
+        print(f"  card-pulse-{theme}.svg")
 
         repo_cards = build_repo_cards(theme, repos, projects_cfg)
         for i, card in enumerate(repo_cards):
