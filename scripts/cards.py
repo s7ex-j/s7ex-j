@@ -50,7 +50,7 @@ THEMES = {
     },
 }
 FONT = 'font-family="ui-monospace,SFMono-Regular,Consolas,monospace"'
-MONO = f'{FONT} font-size="13"'
+MONO = FONT
 
 # ─── Helpers ────────────────────────────────────────────────────────────────
 
@@ -93,7 +93,7 @@ def make_svg_card(
         f'<rect width="{CARD_W}" height="{CARD_H}" rx="12" fill="{t["bg"]}" '
         f'stroke="{t["line"]}" filter="url(#shadow)"/>',
         f'<rect x="16" y="16" width="448" height="38" rx="6" fill="{t["panel"]}"/>',
-        f'<text x="20" y="41" fill="{t["title"]}" {MONO} font-weight="700">{esc(title)}</text>',
+        f'<text x="20" y="41" fill="{t["title"]}" {MONO} font-size="13" font-weight="700">{esc(title)}</text>',
     ]
 
     if icon:
@@ -111,9 +111,9 @@ def make_svg_card(
     for i, (label, value) in enumerate(rows):
         y = y_start + i * 30
         parts.extend([
-            f'<text x="24" y="{y}" fill="{t["muted"]}" {MONO}>{esc(label)}</text>',
+            f'<text x="24" y="{y}" fill="{t["muted"]}" {MONO} font-size="13">{esc(label)}</text>',
             f'<text x="{CARD_W - 24}" y="{y}" text-anchor="end" fill="{t["text"]}" '
-            f'{MONO} font-weight="600">{esc(value)}</text>',
+            f'{MONO} font-size="13" font-weight="600">{esc(value)}</text>',
         ])
 
     parts.append("</svg>")
@@ -162,8 +162,8 @@ def make_repo_card(
         f'<rect x="16" y="16" width="448" height="188" rx="6" fill="{t["panel"]}" '
         'style="transition:fill .15s"/>',
         "</a>",
-        f'<text x="20" y="40" fill="{t["title"]}" {MONO} font-weight="700" '
-        f'font-size="15">{esc(name)}</text>',
+        f'<text x="20" y="40" fill="{t["title"]}" {MONO} font-size="15" font-weight="700">'
+        f'{esc(name)}</text>',
     ]
     if icon:
         parts.append(
