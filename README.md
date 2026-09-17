@@ -7,7 +7,7 @@
 
 <!-- NAME / TAGLINE -->
 <a href="https://github.com/s7ex-j">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2000&pause=800&color=93A9EE&center=true&vCenter=true&width=800&lines=Andre+-+Data+Analyst+Jr;Elasticity+%C2%B7+Stacking+%C2%B7+Power+BI+%C2%B7+SQL" alt="typing banner">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2000&pause=800&color=93A9EE&center=true&vCenter=true&width=800&lines=Andre+-+Data+Analyst+Jr;Industrial+Eng+%C2%B7+Data+Science+%C2%B7+Stacking+%C2%B7+SQL" alt="typing banner">
 </a>
 
 <br>
@@ -42,7 +42,7 @@
 ## This is me :)
 
 Hi, I'm **Andre**, double-degree student in Industrial Engineering and Data Science, broadcasting from Lima, Perú 🇵🇪.
-I build models and dashboards that turn messy operational data into pricing decisions and forecasts — mostly at the intersection of econometrics and machine learning.
+I build models and dashboards that turn messy operational data into actionable insights — applying industrial engineering rigor to data science problems.
 
 I'm a restless reader: I devour papers on AI fairness, behavioral economics, psychology of decision-making, environmental engineering, legal informatics, and fitness science — whatever catches my attention today.
 
@@ -50,9 +50,8 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 - 📍 **Based in**: Lima, Perú
 - 🏢 **Target role**: Analista de Datos Junior / Practicante BI
 - 📊 **Daily driver**: Power BI, SQL, Python (Pandas, scikit-learn, statsmodels), DAX
-- 🧪 **Research interests**: Price-demand elasticity, ensemble stacking for sports prediction, behavioral demand drivers, causal inference
+- 🧪 **Research interests**: AI ethics & fairness, decision neuroscience, behavioral economics, environmental sustainability, legal informatics, fitness science, ensemble methods for prediction
 - 📝 **Academic writing**: LaTeX (IEEE, APA 7), published on [Zenodo](https://doi.org/10.5281/zenodo.21709748) and [ResearchGate](https://www.researchgate.net/profile/Jharol-Vilca-Ramos)
-- 📚 **Currently reading**: Papers on AI ethics, decision neuroscience, environmental sustainability, legal AI — anything that lets me complicate mi vida un poco más.
 
 <br>
 
@@ -63,7 +62,7 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 | Project | Description | Status | Stack |
 |---|---|---|---|
 | `A.N.D.R.E.` | Ensemble stacking predictor for football matches (World Cup 2026) | ⚡ Active | Python · XGBoost · LightGBM · Optuna |
-| `dophamine` | Behavioral economics toolkit for demand analysis and elasticity estimation | 🛠️ Prototyping | Python · statsmodels · behavioral economics |
+| `dophamine` | Offline-first wellness app: nutrition, training & biometrics tracker with weekly insights | 🛠️ Prototyping | Python · offline-first · wellness analytics |
 | `LaTeX Templates` | Academic writing templates following IEEE and APA 7 standards | ✅ Maintenance | LaTeX · IEEE · APA 7 |
 
 </div>
@@ -75,15 +74,16 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 ## 💡 Thinking about
 
 Right now, Andre is deep-diving into:
-- **Behavioral demand drivers** — how psychology bends price elasticity
-- **Causal inference in retail** — counterfactuals for pricing strategy  
+- **Industrial Engineering + AI** — optimizing systems with data-driven decisions
+- **Causal inference** — counterfactuals for real-world impact
 - **xG/football analytics** — ensemble methods for match prediction
 - **AI in legal docs** — NLP for contract analysis (side quest)
 - **Decision neuroscience** — what the brain tells us about choice
+- **Fitness science & nutrition** — data-driven wellness tracking
 
 <br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=2500&pause=1000&color=6366F7&center=true&vCenter=true&width=550&lines=Currently:+pricing+models+vs+behavioral+biases;Next:+causal+inference+in+football+analytics;Reading:+decision+neuroscience+papers" alt="thinking">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=2500&pause=1000&color=6366F7&center=true&vCenter=true&width=550&lines=Currently:+industrial+AI+for+system+optimization;Next:+causal+inference+in+sports+analytics;Reading:+decision+neuroscience+papers" alt="thinking">
 
 </div>
 
