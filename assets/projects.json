@@ -1,17 +1,17 @@
 [
   {
-    "repo": "A.N.D.R.E.",
+    "repo": "A.N.D.R.E-Modelo-predictivo-mundiales",
     "title": "A.N.D.R.E. — World Cup 2026 Stacking Predictor",
     "description": "Ensemble stacking (XGBoost, LightGBM, CatBoost, Random Forest) for football match prediction. Elo ratings, xG, transfer market features. Optuna + walk-forward validation."
   },
   {
-    "repo": "dophamine",
-    "title": "dophamine — Behavioral Economics Toolkit",
-    "description": "Toolkit for behavioral economics research: demand analysis, elasticity estimation, and decision-making models. Statistical utilities for experimental economics."
+    "repo": "Dophamine",
+    "title": "Dophamine — Offline-first wellness tracker",
+    "description": "Aplicación offline-first para entrenamiento, biometría y bienestar personal."
   },
   {
-    "repo": "Plantillas-LaTeX",
-    "title": "Plantillas-LaTeX — Academic Writing Templates",
-    "description": "LaTeX templates for academic writing following IEEE and APA 7 standards. Includes thesis, paper, and presentation templates."
+    "repo": "plantillas-latex-ieee-apa7",
+    "title": "Plantillas LaTeX — IEEE & APA 7",
+    "description": "Plantillas LaTeX basadas en clase JAES (AES) adaptadas al español para uso académico: IEEE numérico [1],[2] (BibTeX) y APA 7 oficial (biblatex-apa + biber)."
   }
 ]
