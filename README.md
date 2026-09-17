@@ -7,7 +7,7 @@
 
 <!-- NAME / TAGLINE -->
 <a href="https://github.com/s7ex-j">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=2600&pause=900&color=93A9EE&center=true&vCenter=true&width=880&lines=Andre+-+Data+Analyst+Jr;Elasticity+·+Stacking+·+Power+BI+·+SQL;Building+here+since+Forever" alt="typing banner">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2000&pause=800&color=93A9EE&center=true&vCenter=true&width=800&lines=Andre+-+Data+Analyst+Jr;Elasticity+%C2%B7+Stacking+%C2%B7+Power+BI+%C2%B7+SQL" alt="typing banner">
 </a>
 
 <br>
@@ -20,7 +20,7 @@
 
 <br>
 
-<img src="https://visitor-badge.lithub.app/api/answer?dp=s7ex-j&label=profile+views&style=flat&color=93A9EE" alt="profile views">
+<img src="https://komarev.com/ghpvc/?username=s7ex-j&label=profile%20views&color=93A9EE&style=flat" alt="profile views">
 
 </div>
 
@@ -83,7 +83,7 @@ Right now, Andre is deep-diving into:
 
 <br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=3000&pause=1500&color=6366F7&center=true&vCenter=true&width=600&lines=Currently:+pricing+models+vs+behavioral+biases;Next:+causal+inference+in+football+analytics;Reading:+decision+neuroscience+papers" alt="thinking">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=2500&pause=1000&color=6366F7&center=true&vCenter=true&width=550&lines=Currently:+pricing+models+vs+behavioral+biases;Next:+causal+inference+in+football+analytics;Reading:+decision+neuroscience+papers" alt="thinking">
 
 </div>
 
@@ -93,14 +93,22 @@ Right now, Andre is deep-diving into:
 
 ## my perfect stack
 
-<!-- Using direct image URLs that GitHub reliably renders -->
-<img src="https://img.icons8.com/?size=48&id=9mNsAwXxmM0W&icon=python&name=python" alt="python" width="48" height="48">
-<img src="https://img.icons8.com/?size=48&id=9mNsAwXxmM0W&icon=sql&name=sql" alt="sql" width="48" height="48">
-<img src="https://img.icons8.com/?size=48&id=9mNsAwXxmM0W&icon=r&name=r" alt="r" width="48" height="48">
-<img src="https://img.icons8.com/?size=48&id=9mNsAwXxmM0W&icon=power-bi&name=powerbi" alt="powerbi" width="48" height="48">
-<img src="https://img.icons8.com/?size=48&id=9mNsAwXxmM0W&icon=postgres&name=postgres" alt="postgres" width="48" height="48">
-<img src="https://img.icons8.com/?size=48&id=9mNsAwXxmM0W&icon=docker&name=docker" alt="docker" width="48" height="48">
-<img src="https://img.icons8.com/?size=48&id=9mNsAwXxmM0W&icon=latex&name=latex" alt="latex" width="48" height="48">
+<!-- Using shields.io tech badges - reliable and theme-aware -->
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+<img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL">
+<img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="R">
+<img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI">
+<img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+<img src="https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white" alt="LaTeX">
+<img src="https://img.shields.io/badge/DAX-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="DAX">
+<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+<img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn">
+<img src="https://img.shields.io/badge/statsmodels-005C9C?style=for-the-badge&logo=python&logoColor=white" alt="statsmodels">
+<img src="https://img.shields.io/badge/XGBoost-EC3D3D?style=for-the-badge&logo=xgboost&logoColor=white" alt="XGBoost">
+<img src="https://img.shields.io/badge/LightGBM-00C4B4?style=for-the-badge&logo=lightgbm&logoColor=white" alt="LightGBM">
+<img src="https://img.shields.io/badge/Optuna-0078D4?style=for-the-badge&logo=optuna&logoColor=white" alt="Optuna">
 
 </div>
 
