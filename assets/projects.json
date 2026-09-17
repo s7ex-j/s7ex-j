@@ -3,18 +3,21 @@
     "repo": "A.N.D.R.E-Modelo-predictivo-mundiales",
     "title": "A.N.D.R.E. — World Cup 2026 Stacking Predictor",
     "description": "Ensemble stacking (XGBoost, LightGBM, CatBoost, Random Forest) for football match prediction. Elo ratings, xG, transfer market features. Optuna + walk-forward validation.",
-    "icon": "⚽"
+    "icon": "⚽",
+    "tech": ["Python", "XGBoost", "LightGBM", "Optuna", "R", "Stan"]
   },
   {
     "repo": "Dophamine",
     "title": "Dophamine — Offline-first wellness app",
     "description": "Offline-first nutrition, training & biometrics tracker that records daily totals and converts them into clear weekly recommendations — no per-food logging, no spreadsheets.",
-    "icon": "🧠"
+    "icon": "🧠",
+    "tech": ["TypeScript", "React Native", "SQLite", "Offline-first"]
   },
   {
     "repo": "plantillas-latex-ieee-apa7",
     "title": "Plantillas LaTeX — IEEE & APA 7",
     "description": "Plantillas LaTeX basadas en clase JAES (AES) adaptadas al español para uso académico: IEEE numérico [1],[2] (BibTeX) y APA 7 oficial (biblatex-apa + biber).",
-    "icon": "📄"
+    "icon": "📄",
+    "tech": ["LaTeX", "IEEE", "APA 7", "BibTeX", "Biber"]
   }
 ]

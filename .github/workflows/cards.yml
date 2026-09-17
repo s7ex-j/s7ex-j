@@ -29,13 +29,14 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r scripts/banner/requirements.txt
-          pip install requests
+          pip install requests pillow
 
       - name: Generate cards
         env:
           METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
         run: |
           python scripts/cards.py --user s7ex-j --projects assets/projects.json --out assets
+          python scripts/featured.py --projects assets/projects.json --logos assets/source/project-logos --out assets
 
       - name: Checkout output branch
         uses: actions/checkout@v4

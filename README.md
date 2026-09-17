@@ -156,17 +156,23 @@ Right now, Andre is deep-diving into:
 <tr>
 <td width="33%" align="center" valign="top">
 
-<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-repo-0-dark.svg" width="300" alt="A.N.D.R.E.">
+<a href="https://github.com/s7ex-j/A.N.D.R.E-Modelo-predictivo-mundiales" target="_blank" rel="noopener">
+<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-featured-0-dark.svg" width="480" alt="A.N.D.R.E.">
+</a>
 
 </td>
 <td width="33%" align="center" valign="top">
 
-<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-repo-1-dark.svg" width="300" alt="dophamine">
+<a href="https://github.com/s7ex-j/Dophamine" target="_blank" rel="noopener">
+<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-featured-1-dark.svg" width="480" alt="Dophamine">
+</a>
 
 </td>
 <td width="33%" align="center" valign="top">
 
-<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-repo-2-dark.svg" width="300" alt="Plantillas-LaTeX">
+<a href="https://github.com/s7ex-j/plantillas-latex-ieee-apa7" target="_blank" rel="noopener">
+<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-featured-2-dark.svg" width="480" alt="Plantillas-LaTeX">
+</a>
 
 </td>
 </tr>
