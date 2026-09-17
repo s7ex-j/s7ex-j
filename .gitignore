@@ -96,6 +96,11 @@ Desktop.ini
 # assets/radar*.svg
 # assets/metrics.*.svg
 
+# Banner generation intermediate files
+frames/
+scripts/banner/data/
+scripts/banner/logos/
+
 # ========================================
 # Testing / Coverage
 # ========================================
