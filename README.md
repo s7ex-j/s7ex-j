@@ -20,7 +20,7 @@
 <a href="https://instagram.com/s7ex.j"><img src="https://img.shields.io/badge/Instagram-dd2a36?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
 <a href="https://github.com/s7ex-j"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=93A9EE" alt="GitHub"></a>
 <a href="https://orcid.org/0009-0009-7897-3439"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID"></a>
-<a href="https://www.linkedin.com/in/jharol-vilca-ramos/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+<a href="https://www.linkedin.com/in/andre/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 
 <br>
 
@@ -29,6 +29,20 @@
 </div>
 
 ---
+
+<details align="center">
+  <summary>📚 Tabla de Contenidos</summary>
+  
+  - [This is me :)](#this-is-me-)
+  - [Building](#building)
+  - [Thinking about](#thinking-about)
+  - [Skillset Radar](#skillset-radar)
+  - [Pulse](#pulse)
+  - [Featured Work](#featured-work)
+  - [Words](#words)
+  - [Now](#now)
+  
+</details>
 
 ## This is me :)
 
@@ -51,11 +65,11 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 
 ## 🔮 Building
 
-| Project | Status | Stack |
-|---|---|---|
-| `A.N.D.R.E.` | ⚡ Active | Python · XGBoost · LightGBM · Optuna |
-| `dophamine` | 🛠️ Prototyping | Python · statsmodels · behavioral economics |
-| LaTeX Templates | ✅ Maintenance | LaTeX · IEEE · APA 7 |
+| Project | Description | Status | Stack |
+|---|---|---|---|
+| `A.N.D.R.E.` | Ensemble stacking predictor for football matches (World Cup 2026) | ⚡ Active | Python · XGBoost · LightGBM · Optuna |
+| `dophamine` | Behavioral economics toolkit for demand analysis and elasticity estimation | 🛠️ Prototyping | Python · statsmodels · behavioral economics |
+| `LaTeX Templates` | Academic writing templates following IEEE and APA 7 standards | ✅ Maintenance | LaTeX · IEEE · APA 7 |
 
 </div>
 

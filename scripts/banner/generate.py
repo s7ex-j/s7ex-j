@@ -29,10 +29,10 @@ TRAVELLER_COUNT = 900
 SEED = 314159
 
 ROWS = [
-    ("Subject", "Jharol"),
+    ("Subject", "Andre"),
     ("Role", "Data Analyst Jr · BI Practitioner"),
     ("Origin", "Lima, Perú"),
-    ("Education", "Industrial Eng (UPN) + Data Science (ISIL)"),
+    ("Education", "Industrial Eng + Data Science"),
     ("Status", "Elasticity · Stacking · Power BI · SQL"),
     ("ToolChain", "VS Code · Git · Jupyter"),
     ("Core.Lang", "Python · SQL · R"),
@@ -40,7 +40,7 @@ ROWS = [
     ("Core.BI", "Power BI · DAX · Matplotlib · Seaborn · Plotly"),
     ("Core.DB", "PostgreSQL · MySQL · BigQuery"),
     ("Grid.Mail", "—"),
-    ("Grid.LinkedIn", "/in/jharol-vilca-ramos"),
+    ("Grid.LinkedIn", "/in/andre-vilca-ramos"),
     ("Grid.GitHub", "s7ex-j"),
     ("Grid.ORCID", "0009-0009-7897-3439"),
 ]
@@ -78,59 +78,49 @@ def make_logos() -> dict[str, Image.Image]:
     size = 400
     logos: dict[str, Image.Image] = {}
 
-    # Python-inspired snake/gear hybrid
-    python = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    d = ImageDraw.Draw(python)
-    # Snake body as a coiled path
-    center = np.array([200.0, 200.0])
-    points = []
-    for i in range(36):
-        a = -math.pi/2 + i * math.tau / 36
-        r = 140 - i * 3
-        points.append(tuple(center + r * np.array([math.cos(a), math.sin(a)])))
-    # Draw thick snake body
-    for i in range(len(points)-1):
-        d.line([points[i], points[i+1]], fill="black", width=28, joint="curve")
+    # Kali Linux logo (dragon/back logo silhouette)
+    kali = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    d = ImageDraw.Draw(kali)
+    # Dragon head shape (simplified Kali logo silhouette)
     # Head
-    d.ellipse((points[0][0]-18, points[0][1]-18, points[0][0]+18, points[0][1]+18), fill="black")
+    d.ellipse((100, 100, 300, 300), fill="black")
+    # Horns
+    d.polygon([(140, 80), (170, 130)], fill="black")
+    d.polygon([(230, 80), (200, 130)], fill="black")
     # Eye
-    d.ellipse((points[0][0]+8, points[0][1]-6, points[0][0]+16, points[0][1]+2), fill=(0,0,0,0))
-    logos["python"] = python
+    d.ellipse((150, 160, 170, 180), fill=(0,0,0,0))
+    d.ellipse((230, 160, 250, 180), fill=(0,0,0,0))
+    # Snout
+    d.polygon([(170, 220), (200, 210), (230, 220)], fill="black")
+    logos["kali"] = kali
 
-    # SQL database cylinder
-    sql = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    d = ImageDraw.Draw(sql)
-    # Top ellipse
-    d.ellipse((80, 60, 320, 140), outline="black", width=18)
-    d.ellipse((80, 60, 320, 140), fill=(0,0,0,0))
-    # Bottom ellipse
-    d.ellipse((80, 340, 320, 420), fill="black")
-    # Sides
-    d.rectangle((80, 60, 320, 420), fill="black")
-    # Inner top ellipse (hole)
-    d.ellipse((80, 60, 320, 140), fill=(0,0,0,0))
-    # Stack lines
-    for y in [160, 210, 260, 310]:
-        d.line([(90, y), (310, y)], fill="black", width=8)
-    logos["sql"] = sql
+    # VS Code editor silhouette
+    vscode = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    d = ImageDraw.Draw(vscode)
+    # Editor window
+    d.rectangle((70, 70, 330, 330), fill="black")
+    # Title bar
+    d.rectangle((70, 70, 330, 110), fill="black")
+    # Activity bar on left
+    d.rectangle((70, 70, 110, 330), fill="black")
+    # Editor content lines
+    for y in [140, 170, 200, 230, 260, 290]:
+        d.line([(120, y), (320, y)], fill="black", width=8)
+    logos["vscode"] = vscode
 
-    # Power BI / chart bar silhouette
-    bi = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    d = ImageDraw.Draw(bi)
-    # Bar chart - 5 bars
-    bar_width = 40
-    gap = 20
-    heights = [0.3, 0.55, 0.8, 0.45, 0.7]
-    for i, h in enumerate(heights):
-        x = 70 + i * (bar_width + gap)
-        bh = int(h * 280)
-        d.rectangle((x, 380 - bh, x + bar_width, 380), fill="black")
-    # Axis
-    d.line([(60, 100), (60, 380), (340, 380)], fill="black", width=10)
-    # Y-axis ticks
-    for y in [150, 220, 290, 360]:
-        d.line([(60, y), (80, y)], fill="black", width=6)
-    logos["bi"] = bi
+    # Hacker silhouette (person with hoodie, laptop in front)
+    hacker = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    d = ImageDraw.Draw(hacker)
+    # Hoodie/head shape
+    d.ellipse((120, 80, 280, 240), fill="black")
+    # Hood shadow
+    d.ellipse((140, 100, 260, 220), fill="black")
+    # Hoodie shoulders
+    d.polygon([(80, 240), (120, 320), (280, 320), (320, 240)], fill="black")
+    # Laptop screen (in front of person)
+    d.rectangle((90, 360, 310, 380), outline="black", width=10)
+    d.rectangle((100, 370, 300, 375), fill="black")
+    logos["hacker"] = hacker
 
     for name, image in logos.items():
         image.save(LOGOS / f"{name}.png", optimize=True)
@@ -270,22 +260,22 @@ def render_svg(
     t = THEMES[theme_name]
     n = min(TRAVELLER_COUNT, len(portrait))
     source = portrait[rng.choice(len(portrait), n, replace=False)]
-    python_pts = transport(source, logo_points["python"][:n])
-    sql_pts = transport(python_pts, logo_points["sql"][:n])
-    bi_pts = transport(sql_pts, logo_points["bi"][:n])
+    kali_pts = transport(source, logo_points["kali"][:n])
+    vscode_pts = transport(kali_pts, logo_points["vscode"][:n])
+    hacker_pts = transport(vscode_pts, logo_points["hacker"][:n])
 
     times = [0, 3.0, 4.3, 6.3, 7.6, 9.6, 10.9, 12.9, 14.2]
     key_times = ";".join(num(v / LOOP_SECONDS) for v in times)
-    frames = [source, source, python_pts, python_pts, sql_pts, sql_pts, bi_pts, bi_pts, source]
+    frames = [source, source, kali_pts, kali_pts, vscode_pts, vscode_pts, hacker_pts, hacker_pts, source]
     opacity_values = "0;0;1;1;1;1;1;1;0"
 
     parts: list[str] = [
         '<svg xmlns="http://www.w3.org/2000/svg" '
         f'width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
         'aria-labelledby="title desc">',
-        "<title id=\"title\">Jharol's live system profile</title>",
+        "<title id=\"title\">Andre's live system profile</title>",
         '<desc id="desc">Animated terminal profile with a dithered portrait and '
-        "Python, SQL, and Power BI silhouettes.</desc>",
+        "Kali Linux, VS Code, and hacker silhouettes.</desc>",
         "<defs>",
         '<filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">'
         f'<feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="{t["shadow"]}" '
@@ -321,8 +311,8 @@ def render_svg(
         '<g opacity="1">',
     ]
 
-    # Dense portrait drift bands toward Python centroid
-    python_centroid = python_pts.mean(axis=0)
+    # Dense portrait drift bands toward Kali centroid
+    kali_centroid = kali_pts.mean(axis=0)
     band_ids = rng.integers(0, 94, size=len(portrait))
     noise = rng.normal(0, 4, size=(94, 2))
     for band in range(94):
@@ -330,7 +320,7 @@ def render_svg(
         if not len(pts):
             continue
         centroid = pts.mean(axis=0)
-        delta = (python_centroid - centroid) * 0.18 + noise[band]
+        delta = (kali_centroid - centroid) * 0.18 + noise[band]
         d = point_path(pts)
         parts.append(
             f'<path d="{d}" fill="none" stroke="{t["portrait"]}" stroke-width="1" '
