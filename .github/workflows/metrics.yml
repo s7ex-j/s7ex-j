@@ -17,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          ref: output
 
       - name: Languages (dark theme)
         uses: lowlighter/metrics@latest
@@ -62,4 +65,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/metrics.languages-dark.svg assets/metrics.languages-light.svg
           git diff --staged --quiet || git commit -m "chore: refresh language metrics"
-          git push
+          git push origin output
