@@ -232,12 +232,4 @@ Experimenting with causal ML for pricing recommendations
 
 </div>
 
----
-
-<img src="assets/avatar.jpg" align="right" width="180px" style="border-radius: 16px; margin: 0 0 16px 16px;" alt="avatar">
-
-<div align="center">
-
-<sub>` Built with Python · SVG · GitHub Actions · @s7ex-j `</sub>
-
 </div>

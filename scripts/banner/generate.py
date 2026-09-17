@@ -78,48 +78,70 @@ def make_logos() -> dict[str, Image.Image]:
     size = 400
     logos: dict[str, Image.Image] = {}
 
-    # Kali Linux logo (dragon/back logo silhouette)
+    # Kali Linux logo - dragon silhouette with clear shape
     kali = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     d = ImageDraw.Draw(kali)
-    # Dragon head shape (simplified Kali logo silhouette)
-    # Head
+    # Main dragon head shape (filled black silhouette)
     d.ellipse((100, 100, 300, 300), fill="black")
-    # Horns
-    d.polygon([(140, 80), (170, 130)], fill="black")
-    d.polygon([(230, 80), (200, 130)], fill="black")
-    # Eye
-    d.ellipse((150, 160, 170, 180), fill=(0,0,0,0))
-    d.ellipse((230, 160, 250, 180), fill=(0,0,0,0))
-    # Snout
-    d.polygon([(170, 220), (200, 210), (230, 220)], fill="black")
+    # Eyes as cutouts
+    d.ellipse((150, 160, 175, 185), fill=(0,0,0,0))
+    d.ellipse((225, 160, 250, 185), fill=(0,0,0,0))
+    # Nose
+    d.polygon([(200, 210), (185, 235), (215, 235)], fill=(0,0,0,0))
+    # Horns (pointing up)
+    d.polygon([(140, 95), (170, 140), (200, 120)], fill="black")
+    d.polygon([(230, 95), (260, 140), (200, 120)], fill="black")
+    # Mouth cutout
+    d.arc((160, 220, 240, 280), start=180, end=360, fill=(0,0,0,0), width=20)
+    # Scale pattern on cheek
+    d.ellipse((120, 200, 160, 240), fill=(0,0,0,0))
+    d.ellipse((240, 200, 280, 240), fill=(0,0,0,0))
     logos["kali"] = kali
 
-    # VS Code editor silhouette
+    # VS Code editor silhouette with visible UI elements
     vscode = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     d = ImageDraw.Draw(vscode)
-    # Editor window
-    d.rectangle((70, 70, 330, 330), fill="black")
+    # Main window (black border + lighter fill to show content)
+    d.rectangle((80, 80, 320, 320), outline="black", width=6)
     # Title bar
-    d.rectangle((70, 70, 330, 110), fill="black")
-    # Activity bar on left
-    d.rectangle((70, 70, 110, 330), fill="black")
-    # Editor content lines
-    for y in [140, 170, 200, 230, 260, 290]:
-        d.line([(120, y), (320, y)], fill="black", width=8)
+    d.rectangle((80, 80, 320, 105), fill="black")
+    # Activity bar (left sidebar)
+    d.rectangle((80, 105, 120, 320), fill="black")
+    # Window control dots
+    for cx in [100, 125, 150]:
+        d.ellipse((cx, 90, cx+8, 98), fill="black")
+    d.ellipse((100, 90, 108, 98), fill=(0,0,0,0))
+    d.ellipse((125, 90, 133, 98), fill=(0,0,0,0))
+    d.ellipse((150, 90, 158, 98), fill=(0,0,0,0))
+    # File explorer icons
+    for y in [130, 160, 190, 220, 260, 290]:
+        d.rectangle((130, y, 160, y+5), fill="black")
+    # Code lines
+    for y, w in [(155, 180), (185, 140), (215, 200), (245, 160), (275, 190)]:
+        d.line([(200, y), (200+w, y)], fill="black", width=5)
     logos["vscode"] = vscode
 
-    # Hacker silhouette (person with hoodie, laptop in front)
+    # Hacker silhouette - hooded figure with laptop
     hacker = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     d = ImageDraw.Draw(hacker)
-    # Hoodie/head shape
-    d.ellipse((120, 80, 280, 240), fill="black")
-    # Hood shadow
-    d.ellipse((140, 100, 260, 220), fill="black")
-    # Hoodie shoulders
-    d.polygon([(80, 240), (120, 320), (280, 320), (320, 240)], fill="black")
-    # Laptop screen (in front of person)
-    d.rectangle((90, 360, 310, 380), outline="black", width=10)
-    d.rectangle((100, 370, 300, 375), fill="black")
+    # Head/hood shape
+    d.ellipse((130, 90, 270, 250), fill="black")
+    # Hood inner shadow (darker cutout)
+    d.ellipse((145, 110, 255, 230), fill=(0,0,0,0))
+    # Face cutout (shadowed eyes)
+    d.ellipse((160, 150, 240, 210), fill=(0,0,0,0))
+    # Shoulders/body
+    d.polygon([(100, 240), (180, 310), (220, 310), (300, 240)], fill="black")
+    # Arms
+    d.line([(110, 250), (85, 290)], fill="black", width=14)
+    d.line([(290, 250), (315, 290)], fill="black", width=14)
+    # Laptop base
+    d.rectangle((110, 310, 290, 320), fill="black")
+    # Laptop screen
+    d.rectangle((140, 320, 260, 380), outline="black", width=4)
+    # Screen content (code/text lines inside screen)
+    for y in [340, 355, 370]:
+        d.line([(160, y), (240, y)], fill="black", width=3)
     logos["hacker"] = hacker
 
     for name, image in logos.items():
