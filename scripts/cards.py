@@ -125,6 +125,7 @@ def make_repo_card(
     repo: dict[str, Any],
     *,
     show_lang: bool = True,
+    icon: str | None = None,
 ) -> str:
     """Build a repo card (wider, shows description + stars/forks + lang)."""
     t = THEMES[theme]
@@ -163,11 +164,18 @@ def make_repo_card(
         "</a>",
         f'<text x="20" y="40" fill="{t["title"]}" {MONO} font-weight="700" '
         f'font-size="15">{esc(name)}</text>',
+    ]
+    if icon:
+        parts.append(
+            f'<text x="440" y="40" text-anchor="end" fill="{t["accent2"]}" {MONO} '
+            f'font-size="20">{esc(icon)}</text>'
+        )
+    parts.extend([
         f'<text x="20" y="62" fill="{t["muted"]}" {MONO} font-size="11" '
         f'style="max-width:400px">{esc((desc or "No description")[:90])}{"…" if desc and len(desc) > 90 else ""}</text>',
         f'<text x="20" y="90" fill="{t["accent"]}" {MONO} font-size="12">★ {num_fmt(stars)}</text>',
         f'<text x="130" y="90" fill="{t["muted"]}" {MONO} font-size="12">⑂ {num_fmt(forks)}</text>',
-    ]
+    ])
     if show_lang and lang:
         parts.append(
             f'<text x="240" y="90" fill="{t["accent2"]}" {MONO} font-size="12">{esc(lang)}</text>'
@@ -317,7 +325,8 @@ def build_repo_cards(theme: str, repos: list[dict], projects_cfg: list[dict]) ->
             continue
         repo = next((r for r in repos if r["name"] == repo_name), None)
         if repo:
-            cards.append(make_repo_card(theme, repo, show_lang=True))
+            icon = proj.get("icon")
+            cards.append(make_repo_card(theme, repo, show_lang=True, icon=icon))
 
     # Then top non-fork, non-featured repos by stars
     other = [

@@ -2,16 +2,19 @@
   {
     "repo": "A.N.D.R.E-Modelo-predictivo-mundiales",
     "title": "A.N.D.R.E. — World Cup 2026 Stacking Predictor",
-    "description": "Ensemble stacking (XGBoost, LightGBM, CatBoost, Random Forest) for football match prediction. Elo ratings, xG, transfer market features. Optuna + walk-forward validation."
+    "description": "Ensemble stacking (XGBoost, LightGBM, CatBoost, Random Forest) for football match prediction. Elo ratings, xG, transfer market features. Optuna + walk-forward validation.",
+    "icon": "⚽"
   },
   {
     "repo": "Dophamine",
     "title": "Dophamine — Offline-first wellness tracker",
-    "description": "Aplicación offline-first para entrenamiento, biometría y bienestar personal."
+    "description": "Aplicación offline-first para entrenamiento, biometría y bienestar personal.",
+    "icon": "🧠"
   },
   {
     "repo": "plantillas-latex-ieee-apa7",
     "title": "Plantillas LaTeX — IEEE & APA 7",
-    "description": "Plantillas LaTeX basadas en clase JAES (AES) adaptadas al español para uso académico: IEEE numérico [1],[2] (BibTeX) y APA 7 oficial (biblatex-apa + biber)."
+    "description": "Plantillas LaTeX basadas en clase JAES (AES) adaptadas al español para uso académico: IEEE numérico [1],[2] (BibTeX) y APA 7 oficial (biblatex-apa + biber).",
+    "icon": "📄"
   }
 ]
