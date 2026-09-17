@@ -1,0 +1,116 @@
+# ========================================
+# Credenciales y Secretos
+# ========================================
+*.env
+*.env.*
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+*.cer
+*.pfx
+*.p12
+*secret*
+*credential*
+*token*
+*password*
+*.aws/
+*.ssh/
+*.gcp/
+*.azure/
+config/secrets.*
+secrets.*
+credentials.*
+auth.*
+
+# ========================================
+# Archivos locales de desarrollo
+# ========================================
+commit_msg.txt
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ========================================
+# Python
+# ========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+*.whl
+
+# ========================================
+# Jupyter
+# ========================================
+.ipynb_checkpoints/
+*.ipynb.json
+
+# ========================================
+# IDEs
+# ========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.cproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# ========================================
+# OS
+# ========================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ========================================
+# Datos locales / Generated files (local only)
+# ========================================
+# Solo ignorar en desarrollo local, NO en el repo
+# Los assets generados SÍ deben estar en el repo para el output branch
+# assets/banner-*.svg
+# assets/card-*.svg
+# assets/radar*.svg
+# assets/metrics.*.svg
+
+# ========================================
+# Testing / Coverage
+# ========================================
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ========================================
+# Linting
+# ========================================
+.pylintrc
+.flake8
+.ruff_cache/

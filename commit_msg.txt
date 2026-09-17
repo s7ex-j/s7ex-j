@@ -1,7 +1,0 @@
-feat: add terminal banner generator with GitHub Actions
-
-- Add scripts/generate_terminal.py: generates animated terminal GIF with ASCII avatar
-- Add .github/workflows/generate-banner.yml: weekly workflow to regenerate banner
-- Add assets/avatar.jpg: profile photo for ASCII rendering
-- Add assets/terminal-banner.gif: generated animated banner
-- Add README.md: profile README with banner embed and project info
