@@ -73,77 +73,31 @@ THEMES = {
 }
 
 def make_logos() -> dict[str, Image.Image]:
-    """Create clean 400px black-on-transparent silhouette sources."""
-    LOGOS.mkdir(parents=True, exist_ok=True)
+    """Load custom logo PNGs from assets/source/logos/ and convert to silhouettes."""
+    custom_logos = ASSETS / "source/logos"
     size = 400
     logos: dict[str, Image.Image] = {}
 
-    # Kali Linux logo - dragon silhouette with clear shape
-    kali = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    d = ImageDraw.Draw(kali)
-    # Main dragon head shape (filled black silhouette)
-    d.ellipse((100, 100, 300, 300), fill="black")
-    # Eyes as cutouts
-    d.ellipse((150, 160, 175, 185), fill=(0,0,0,0))
-    d.ellipse((225, 160, 250, 185), fill=(0,0,0,0))
-    # Nose
-    d.polygon([(200, 210), (185, 235), (215, 235)], fill=(0,0,0,0))
-    # Horns (pointing up)
-    d.polygon([(140, 95), (170, 140), (200, 120)], fill="black")
-    d.polygon([(230, 95), (260, 140), (200, 120)], fill="black")
-    # Mouth cutout
-    d.arc((160, 220, 240, 280), start=180, end=360, fill=(0,0,0,0), width=20)
-    # Scale pattern on cheek
-    d.ellipse((120, 200, 160, 240), fill=(0,0,0,0))
-    d.ellipse((240, 200, 280, 240), fill=(0,0,0,0))
-    logos["kali"] = kali
+    logo_names = ["kali", "vscode", "hacker"]
+    for name in logo_names:
+        path = custom_logos / f"{name}.png"
+        if path.exists():
+            img = Image.open(path).convert("RGBA").resize((size, size), Image.Resampling.LANCZOS)
+            # Convert to pure black silhouette
+            arr = np.array(img)
+            alpha = arr[:, :, 3:4]
+            black_img = np.zeros_like(arr)
+            black_img[:, :, :3] = 0  # RGB = black
+            black_img[:, :, 3] = alpha[:, :, 0]  # Keep original alpha
+            logos[name] = Image.fromarray(black_img, "RGBA")
+        else:
+            print(f"WARNING: {path} not found, generating placeholder for '{name}'")
+            img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+            d = ImageDraw.Draw(img)
+            d.ellipse((100, 100, 300, 300), fill="black")
+            logos[name] = img
 
-    # VS Code editor silhouette with visible UI elements
-    vscode = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    d = ImageDraw.Draw(vscode)
-    # Main window (black border + lighter fill to show content)
-    d.rectangle((80, 80, 320, 320), outline="black", width=6)
-    # Title bar
-    d.rectangle((80, 80, 320, 105), fill="black")
-    # Activity bar (left sidebar)
-    d.rectangle((80, 105, 120, 320), fill="black")
-    # Window control dots
-    for cx in [100, 125, 150]:
-        d.ellipse((cx, 90, cx+8, 98), fill="black")
-    d.ellipse((100, 90, 108, 98), fill=(0,0,0,0))
-    d.ellipse((125, 90, 133, 98), fill=(0,0,0,0))
-    d.ellipse((150, 90, 158, 98), fill=(0,0,0,0))
-    # File explorer icons
-    for y in [130, 160, 190, 220, 260, 290]:
-        d.rectangle((130, y, 160, y+5), fill="black")
-    # Code lines
-    for y, w in [(155, 180), (185, 140), (215, 200), (245, 160), (275, 190)]:
-        d.line([(200, y), (200+w, y)], fill="black", width=5)
-    logos["vscode"] = vscode
-
-    # Hacker silhouette - hooded figure with laptop
-    hacker = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    d = ImageDraw.Draw(hacker)
-    # Head/hood shape
-    d.ellipse((130, 90, 270, 250), fill="black")
-    # Hood inner shadow (darker cutout)
-    d.ellipse((145, 110, 255, 230), fill=(0,0,0,0))
-    # Face cutout (shadowed eyes)
-    d.ellipse((160, 150, 240, 210), fill=(0,0,0,0))
-    # Shoulders/body
-    d.polygon([(100, 240), (180, 310), (220, 310), (300, 240)], fill="black")
-    # Arms
-    d.line([(110, 250), (85, 290)], fill="black", width=14)
-    d.line([(290, 250), (315, 290)], fill="black", width=14)
-    # Laptop base
-    d.rectangle((110, 310, 290, 320), fill="black")
-    # Laptop screen
-    d.rectangle((140, 320, 260, 380), outline="black", width=4)
-    # Screen content (code/text lines inside screen)
-    for y in [340, 355, 370]:
-        d.line([(160, y), (240, y)], fill="black", width=3)
-    logos["hacker"] = hacker
-
+    LOGOS.mkdir(parents=True, exist_ok=True)
     for name, image in logos.items():
         image.save(LOGOS / f"{name}.png", optimize=True)
     return logos
