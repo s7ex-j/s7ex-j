@@ -5,7 +5,7 @@ Run:
     python scripts/featured.py --projects assets/projects.json --logos assets/source/project-logos --out assets
 
 Each project gets a 480x220 card with:
-- Project logo as background (with overlay)
+- Project logo as background (referenced by URL, not embedded)
 - Project name + tagline
 - Tech stack badges
 - Entire card links to repo
@@ -14,8 +14,8 @@ Each project gets a 480x220 card with:
 from __future__ import annotations
 
 import argparse
-import base64
 import json
+import shutil
 import sys
 from pathlib import Path
 from typing import Any
@@ -77,35 +77,28 @@ def esc(s: str) -> str:
     )
 
 
-def num_fmt(n: int) -> str:
-    if n >= 1_000_000:
-        return f"{n / 1_000_000:.1f}M".rstrip("0").rstrip(".")
-    if n >= 1_000:
-        return f"{n / 1_000:.1f}K".rstrip("0").rstrip(".")
-    return str(n)
+def prepare_logo(path: Path, out_dir: Path, repo_name: str) -> str:
+    """Copy and resize logo to output directory, return relative URL."""
+    logo_out = out_dir / f"logo-{repo_name}.png"
 
-
-def img_to_base64(path: Path, max_size: tuple[int, int] = (480, 220)) -> str:
-    """Convert image to base64 data URI, resized to fit card."""
     with Image.open(path) as img:
         img = img.convert("RGBA")
-        img.thumbnail(max_size, Image.Resampling.LANCZOS)
+        # Resize to cover card (maintain aspect, fill 480x220)
+        img.thumbnail((CARD_W, CARD_H), Image.Resampling.LANCZOS)
+        # Create canvas and center the image
         canvas = Image.new("RGBA", (CARD_W, CARD_H), (0, 0, 0, 0))
         x = (CARD_W - img.width) // 2
         y = (CARD_H - img.height) // 2
         canvas.paste(img, (x, y), img)
+        canvas.save(logo_out, format="PNG")
 
-        import io
-        buf = io.BytesIO()
-        canvas.save(buf, format="PNG")
-        b64 = base64.b64encode(buf.getvalue()).decode()
-        return f"data:image/png;base64,{b64}"
+    return f"logo-{repo_name}.png"
 
 
 def make_featured_card(
     theme: str,
     project: dict[str, Any],
-    logo_b64: str,
+    logo_url: str,
 ) -> str:
     """Build a branded hero card for a featured project."""
     t = THEMES[theme]
@@ -147,7 +140,7 @@ def make_featured_card(
         '</linearGradient>',
         '</defs>',
         f'<rect width="{CARD_W}" height="{CARD_H}" rx="16" fill="{t["bg"]}" stroke="{t["line"]}" filter="url(#hero-shadow)"/>',
-        f'<image x="0" y="0" width="{CARD_W}" height="{CARD_H}" href="{logo_b64}" preserveAspectRatio="xMidYMid slice"/>',
+        f'<image x="0" y="0" width="{CARD_W}" height="{CARD_H}" href="{logo_url}" preserveAspectRatio="xMidYMid slice"/>',
         f'<rect width="{CARD_W}" height="{CARD_H}" rx="16" fill="url(#overlay-gradient)"/>',
         f'<rect x="0" y="0" width="{CARD_W}" height="4" rx="16" ry="0" fill="url(#badge-gradient)"/>',
         f'<text x="24" y="150" fill="{t["text"]}" {FONT} font-size="22" font-weight="800">{esc(icon)} {esc(name)}</text>',
@@ -190,8 +183,8 @@ def main() -> None:
                 continue
 
             print(f"  Processing {repo_name} ({theme})...")
-            logo_b64 = img_to_base64(logo_path)
-            card_svg = make_featured_card(theme, project, logo_b64)
+            logo_url = prepare_logo(logo_path, out_dir, repo_name)
+            card_svg = make_featured_card(theme, project, logo_url)
             out_file = out_dir / f"card-featured-{i}-{theme}.svg"
             out_file.write_text(card_svg, encoding="utf-8")
             print(f"    {out_file.name}")
