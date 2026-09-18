@@ -78,7 +78,7 @@ def esc(s: str) -> str:
 
 
 def prepare_logo(path: Path, out_dir: Path, repo_name: str) -> str:
-    """Copy and resize logo to output directory, return relative URL."""
+    """Copy and resize logo to output directory, return absolute URL."""
     logo_out = out_dir / f"logo-{repo_name}.png"
 
     with Image.open(path) as img:
@@ -92,7 +92,8 @@ def prepare_logo(path: Path, out_dir: Path, repo_name: str) -> str:
         canvas.paste(img, (x, y), img)
         canvas.save(logo_out, format="PNG")
 
-    return f"logo-{repo_name}.png"
+    # Return absolute URL for raw.githubusercontent.com
+    return f"https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/logo-{repo_name}.png"
 
 
 def make_featured_card(
