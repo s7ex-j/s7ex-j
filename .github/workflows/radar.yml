@@ -12,6 +12,7 @@ on:
       - "assets/langmix.json"
       - "assets/projects.json"
       - "scripts/radar.py"
+      - "scripts/langmix.py"
       - "scripts/cards.py"
       - "scripts/banner/generate.py"
       - "scripts/banner/requirements.txt"
@@ -47,9 +48,12 @@ jobs:
           mv assets/radar/radar-light.svg assets/radar-light.svg
           rm -rf assets/radar
 
-      # Hand-authored contract & language stack radar (edit assets/langmix.json)
+      # Language radar from real GitHub language bytes
       - name: Language radar
+        env:
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
         run: |
+          python scripts/langmix.py --user "${{ github.repository_owner }}" -o assets/langmix.json
           python scripts/radar.py --data assets/langmix.json -o assets/radar-langs --values
           mv assets/radar-langs/radar-langs-dark.svg assets/radar-langs-dark.svg
           mv assets/radar-langs/radar-langs-light.svg assets/radar-langs-light.svg
