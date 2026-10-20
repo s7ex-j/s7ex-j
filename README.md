@@ -7,7 +7,7 @@
 
 <!-- NAME / TAGLINE -->
 <a href="https://github.com/s7ex-j">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2000&pause=800&color=93A9EE&center=true&vCenter=true&width=800&lines=Andre+-+Data+Analyst+Jr;Industrial+Eng+%C2%B7+Data+Science+%C2%B7+Stacking+%C2%B7+SQL" alt="typing banner">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2000&pause=800&color=93A9EE&center=true&vCenter=true&width=800&lines=Andre+-+Data+Analyst+Jr;Industrial+Eng+%C2%B7+Data+Science+%C2%B7+Stacking+%C2%B7+Statistics" alt="typing banner">
 </a>
 
 <br>
@@ -16,7 +16,7 @@
 <a href="https://instagram.com/s7ex.j"><img src="https://img.shields.io/badge/Instagram-dd2a36?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" height="30"></a>
 <a href="https://github.com/s7ex-j"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=93A9EE" alt="GitHub" height="30"></a>
 <a href="https://orcid.org/0009-0009-7897-3439"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID" height="30"></a>
-<a href="https://www.linkedin.com/in/andre/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="30"></a>
+<a href="https://www.linkedin.com/in/andre-vilca-ramos/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="30"></a>
 
 <br>
 
@@ -49,7 +49,8 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 - 🎓 **Student**: Industrial Engineering + Data Science (dual track)
 - 📍 **Based in**: Lima, Perú
 - 🏢 **Target role**: Analista de Datos Junior / Practicante BI
-- 📊 **Daily driver**: Power BI, SQL, Python (Pandas, scikit-learn, statsmodels), DAX
+- 📊 **Daily driver**: Python (Pandas, scikit-learn, statsmodels), R (XGBoost, Stan/brms), TypeScript
+- 📚 **Learning now**: SQL and Power BI
 - 🧪 **Research interests**: AI ethics & fairness, decision neuroscience, behavioral economics, environmental sustainability, legal informatics, fitness science, ensemble methods for prediction
 - 📝 **Academic writing**: LaTeX (IEEE, APA 7), published on [Zenodo](https://doi.org/10.5281/zenodo.21709748) and [ResearchGate](https://www.researchgate.net/profile/Jharol-Vilca-Ramos)
 
@@ -61,8 +62,8 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 
 | Project | Description | Status | Stack |
 |---|---|---|---|
-| `A.N.D.R.E.` | Ensemble stacking predictor for football matches (World Cup 2026) | ⚡ Active | Python · XGBoost · LightGBM · Optuna |
-| `dophamine` | Offline-first wellness app: nutrition, training & biometrics tracker with weekly insights | 🛠️ Prototyping | Python · offline-first · wellness analytics |
+| `A.N.D.R.E.` | Ensemble stacking predictor for football matches (World Cup 2026) | ⚡ Active | R · XGBoost · Stan/brms · plumber |
+| `dophamine` | Offline-first wellness app: nutrition, training & biometrics tracker with weekly insights | 🚀 v0.3.0 | TypeScript · React Native · SQLite |
 | `LaTeX Templates` | Academic writing templates following IEEE and APA 7 standards | ✅ Maintenance | LaTeX · IEEE · APA 7 |
 
 </div>
@@ -95,20 +96,24 @@ Right now, Andre is deep-diving into:
 
 <!-- Using shields.io tech badges - reliable and theme-aware -->
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-<img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL">
 <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="R">
-<img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI">
-<img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+<img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native">
+<img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
 <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
 <img src="https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white" alt="LaTeX">
-<img src="https://img.shields.io/badge/DAX-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="DAX">
 <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
 <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
 <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn">
 <img src="https://img.shields.io/badge/statsmodels-005C9C?style=for-the-badge&logo=python&logoColor=white" alt="statsmodels">
 <img src="https://img.shields.io/badge/XGBoost-EC3D3D?style=for-the-badge&logo=xgboost&logoColor=white" alt="XGBoost">
-<img src="https://img.shields.io/badge/LightGBM-00C4B4?style=for-the-badge&logo=lightgbm&logoColor=white" alt="LightGBM">
-<img src="https://img.shields.io/badge/Optuna-0078D4?style=for-the-badge&logo=optuna&logoColor=white" alt="Optuna">
+<img src="https://img.shields.io/badge/Stan-B2001D?style=for-the-badge&logo=stan&logoColor=white" alt="Stan">
+
+<br><br>
+
+<sub>Learning now</sub><br>
+<img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQL">
+<img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI">
 
 </div>
 
