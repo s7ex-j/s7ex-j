@@ -16,6 +16,7 @@
 <a href="https://instagram.com/s7ex.j"><img src="https://img.shields.io/badge/Instagram-dd2a36?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" height="30"></a>
 <a href="https://github.com/s7ex-j"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=93A9EE" alt="GitHub" height="30"></a>
 <a href="https://orcid.org/0009-0009-7897-3439"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID" height="30"></a>
+<a href="https://www.researchgate.net/profile/Jharol-Vilca-Ramos"><img src="https://img.shields.io/badge/ResearchGate-00CCBB?style=for-the-badge&logo=researchgate&logoColor=white" alt="ResearchGate" height="30"></a>
 <a href="https://www.linkedin.com/in/andre-vilca-ramos/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="30"></a>
 
 <br>
@@ -31,6 +32,7 @@
   
   - [This is me :)](#this-is-me-)
   - [Building](#building)
+  - [Publications](#publications)
   - [Thinking about](#thinking-about)
   - [my perfect stack](#my-perfect-stack)
   - [Skillset Radar](#skillset-radar)
@@ -52,7 +54,7 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 - 📊 **Daily driver**: Python (Pandas, scikit-learn, statsmodels), R (XGBoost, Stan/brms), TypeScript
 - 📚 **Learning now**: SQL and Power BI
 - 🧪 **Research interests**: AI ethics & fairness, decision neuroscience, behavioral economics, environmental sustainability, legal informatics, fitness science, ensemble methods for prediction
-- 📝 **Academic writing**: LaTeX (IEEE, APA 7), published on Zenodo ([price elasticity in food delivery](https://doi.org/10.5281/zenodo.23586040), [Parque Kennedy soil report](https://doi.org/10.5281/zenodo.21695655)) and [ResearchGate](https://www.researchgate.net/profile/Jharol-Vilca-Ramos)
+- 📝 **Academic writing**: LaTeX (IEEE, APA 7), reproducible reports with DOI on Zenodo and [ResearchGate](https://www.researchgate.net/profile/Jharol-Vilca-Ramos) — see [Publications](#publications)
 
 <br>
 
@@ -68,6 +70,21 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 | `LaTeX Templates` | Academic writing templates following IEEE and APA 7 standards | ✅ Maintenance | LaTeX · IEEE · APA 7 |
 
 </div>
+
+---
+
+<div align="center">
+
+## 📄 Publications
+
+</div>
+
+**Elasticidad precio-demanda en el servicio de delivery de comidas: evidencia desde datos transaccionales** (2026). Working paper, v3.3.0.
+Price elasticity of demand on a food delivery platform with 456,548 week × center × meal observations: OLS, two-way fixed effects, IV 2SLS, restricted cubic splines and quantile regression. Main finding: elasticity is not a single number — it varies with price level, category, week and identification strategy.
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23586040-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23586040) [![ResearchGate](https://img.shields.io/badge/ResearchGate-preprint-00CCBB?style=flat-square&logo=researchgate&logoColor=white)](https://www.researchgate.net/publication/416623085_Elasticidad_Precio-Demanda_en_el_Servicio_de_Delivery_de_Comidas_Evidencia_desde_Datos_Transaccionales) [![Code](https://img.shields.io/badge/code-demanda--delivery--v2-0d1117?style=flat-square&logo=github)](https://github.com/s7ex-j/demanda-delivery-v2)
+
+**Informe Técnico: Caracterización Fisicoquímica de Suelos Urbanos del Parque Kennedy** (2026). Technical report.
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21695655-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.21695655) [![Code](https://img.shields.io/badge/repo-Informe--Tecnico--Parque--Kennedy-0d1117?style=flat-square&logo=github)](https://github.com/s7ex-j/Informe-Tecnico-Parque-Kennedy)
 
 ---
 
@@ -187,5 +204,3 @@ Right now, Andre is deep-diving into:
 </div>
 
 ---
-
-</div>
