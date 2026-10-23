@@ -21,6 +21,7 @@ from pathlib import Path
 from typing import Any
 
 from PIL import Image
+from xml.sax.saxutils import escape as xml_escape
 
 # Constants
 CARD_W, CARD_H = 480, 220
@@ -60,6 +61,11 @@ PROJECT_COLORS = {
         "secondary": "#9333EA",
         "glow": "#C084FC",
     },
+    "demanda-delivery-v2": {
+        "primary": "#F59E0B",
+        "secondary": "#D97706",
+        "glow": "#FBBF24",
+    },
     "plantillas-latex-ieee-apa7": {
         "primary": "#3B82F6",
         "secondary": "#2563EB",
@@ -69,12 +75,8 @@ PROJECT_COLORS = {
 
 
 def esc(s: str) -> str:
-    return (
-        s.replace("&", "&")
-        .replace("<", "<")
-        .replace(">", ">")
-        .replace('"', '"' + '"' + '"')
-    )
+    """Escapa texto para insertarlo en XML/SVG (contenido y atributos)."""
+    return xml_escape(str(s), {'"': "&quot;"})
 
 
 def prepare_logo(path: Path, out_dir: Path, repo_name: str) -> str:
@@ -111,7 +113,11 @@ def make_featured_card(
     tech_stack = project.get("tech", [])
     icon = project.get("icon", "")
 
-    short_desc = desc[:100] + "..." if len(desc) > 100 else desc
+    # Fuente monoespaciada (~0.6 em por carácter): el texto debe caber en 432 px.
+    max_desc = int(432 / (12 * 0.6))
+    short_desc = desc if len(desc) <= max_desc else desc[: max_desc - 1].rstrip() + "…"
+    title_len = len(name) + (2 if icon else 0)
+    title_size = max(14, min(22, int(432 / (0.6 * max(title_len, 1)))))
 
     primary = colors["primary"]
     secondary = colors["secondary"]
@@ -144,7 +150,7 @@ def make_featured_card(
         f'<image x="0" y="0" width="{CARD_W}" height="{CARD_H}" href="{logo_url}" preserveAspectRatio="xMidYMid slice"/>',
         f'<rect width="{CARD_W}" height="{CARD_H}" rx="16" fill="url(#overlay-gradient)"/>',
         f'<rect x="0" y="0" width="{CARD_W}" height="4" rx="16" ry="0" fill="url(#badge-gradient)"/>',
-        f'<text x="24" y="150" fill="{t["text"]}" {FONT} font-size="22" font-weight="800">{esc(icon)} {esc(name)}</text>',
+        f'<text x="24" y="150" fill="{t["text"]}" {FONT} font-size="{title_size}" font-weight="800">{esc(icon)} {esc(name)}</text>',
         f'<text x="24" y="180" fill="{t["muted"]}" {FONT} font-size="12" style="max-width:432px">{esc(short_desc)}</text>',
         f'<text x="24" y="208" fill="{t["accent2"]}" {FONT} font-size="10" font-weight="600">{esc(" | ".join(tech_stack[:4]))}</text>',
     ]
@@ -152,12 +158,13 @@ def make_featured_card(
     link_wrap_start = f'<a href="{esc(url)}" target="_blank" rel="noopener">'
     link_wrap_end = '</a>'
 
-    final_parts = [parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], link_wrap_start]
-    final_parts.extend(parts[6:])
-    final_parts.append(link_wrap_end)
-    final_parts.append("</svg>")
-
-    return "".join(final_parts)
+    # El enlace envuelve el contenido visible, siempre DESPUÉS de cerrar <defs>
+    # (antes se insertaba por índice dentro de <defs> y el SVG quedaba mal formado).
+    body = "".join(parts)
+    head, sep, rest = body.partition("</defs>")
+    if not sep:
+        raise ValueError("La tarjeta no contiene </defs>")
+    return head + sep + link_wrap_start + rest + link_wrap_end + "</svg>"
 
 
 def main() -> None:
