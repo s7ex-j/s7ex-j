@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          token: ${{ github.token }}
           ref: main
 
       - name: Set up Python
@@ -41,7 +41,7 @@ jobs:
       - name: Checkout output branch
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          token: ${{ github.token }}
           ref: output
           path: output
 
