@@ -25,16 +25,16 @@
     ]
   },
   {
-    "repo": "plantillas-latex-ieee-apa7",
-    "title": "Plantillas LaTeX — IEEE & APA 7",
-    "description": "Plantillas LaTeX basadas en clase JAES (AES) adaptadas al español para uso académico: IEEE numérico [1],[2] (BibTeX) y APA 7 oficial (biblatex-apa + biber).",
-    "icon": "📄",
+    "repo": "demanda-delivery-v2",
+    "title": "Elasticidad precio-demanda en delivery",
+    "description": "456K obs.: OLS, panel FE, IV y splines. Informe con DOI.",
+    "icon": "📈",
     "tech": [
-      "LaTeX",
-      "IEEE",
-      "APA 7",
-      "BibTeX",
-      "Biber"
+      "Python",
+      "statsmodels",
+      "linearmodels",
+      "SQLite",
+      "LaTeX"
     ]
   }
 ]

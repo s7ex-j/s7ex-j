@@ -41,7 +41,7 @@
 
 ## This is me :)
 
-Hi, I'm **Andre**, double-degree student in Industrial Engineering and Data Science, broadcasting from Lima, Perú 🇵🇪.
+Hi, I'm **Andre** (Jharol André Vilca Ramos), double-degree student in Industrial Engineering and Data Science, broadcasting from Lima, Perú 🇵🇪.
 I build models and dashboards that turn messy operational data into actionable insights — applying industrial engineering rigor to data science problems.
 
 I'm a restless reader: I devour papers on AI fairness, behavioral economics, psychology of decision-making, environmental engineering, legal informatics, and fitness science — whatever catches my attention today.
@@ -52,7 +52,7 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 - 📊 **Daily driver**: Python (Pandas, scikit-learn, statsmodels), R (XGBoost, Stan/brms), TypeScript
 - 📚 **Learning now**: SQL and Power BI
 - 🧪 **Research interests**: AI ethics & fairness, decision neuroscience, behavioral economics, environmental sustainability, legal informatics, fitness science, ensemble methods for prediction
-- 📝 **Academic writing**: LaTeX (IEEE, APA 7), published on [Zenodo](https://doi.org/10.5281/zenodo.21709748) and [ResearchGate](https://www.researchgate.net/profile/Jharol-Vilca-Ramos)
+- 📝 **Academic writing**: LaTeX (IEEE, APA 7), published on Zenodo ([price elasticity in food delivery](https://doi.org/10.5281/zenodo.23586040), [Parque Kennedy soil report](https://doi.org/10.5281/zenodo.21695655)) and [ResearchGate](https://www.researchgate.net/profile/Jharol-Vilca-Ramos)
 
 <br>
 
@@ -62,6 +62,7 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 
 | Project | Description | Status | Stack |
 |---|---|---|---|
+| `demanda-delivery-v2` | Price elasticity of demand in food delivery (456K obs.): OLS, panel FE, IV, splines · [DOI](https://doi.org/10.5281/zenodo.23586040) | ✅ v3.3.0 | Python · statsmodels · linearmodels · LaTeX |
 | `A.N.D.R.E.` | Ensemble stacking predictor for football matches (World Cup 2026) | ⚡ Active | R · XGBoost · Stan/brms · plumber |
 | `dophamine` | Offline-first wellness app: nutrition, training & biometrics tracker with weekly insights | 🚀 v0.3.0 | TypeScript · React Native · SQLite |
 | `LaTeX Templates` | Academic writing templates following IEEE and APA 7 standards | ✅ Maintenance | LaTeX · IEEE · APA 7 |
@@ -175,8 +176,8 @@ Right now, Andre is deep-diving into:
 </td>
 <td width="33%" align="center" valign="top">
 
-<a href="https://github.com/s7ex-j/plantillas-latex-ieee-apa7" target="_blank" rel="noopener">
-<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-featured-2-dark.svg" width="480" alt="Plantillas-LaTeX">
+<a href="https://github.com/s7ex-j/demanda-delivery-v2" target="_blank" rel="noopener">
+<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-featured-2-dark.svg" width="480" alt="Elasticidad">
 </a>
 
 </td>
