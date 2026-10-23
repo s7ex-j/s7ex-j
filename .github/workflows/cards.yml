@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
           ref: main
 
       - name: Set up Python
@@ -33,7 +33,7 @@ jobs:
 
       - name: Generate cards
         env:
-          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN || github.token }}
         run: |
           python scripts/cards.py --user s7ex-j --projects assets/projects.json --out assets
           python scripts/featured.py --projects assets/projects.json --logos assets/source/project-logos --out assets
@@ -41,7 +41,7 @@ jobs:
       - name: Checkout output branch
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
           ref: output
           path: output
 
