@@ -44,7 +44,7 @@
 ## This is me :)
 
 Hi, I'm **Andre** (Jharol André Vilca Ramos), double-degree student in Industrial Engineering and Data Science, broadcasting from Lima, Perú 🇵🇪.
-I build models and dashboards that turn messy operational data into actionable insights — applying industrial engineering rigor to data science problems.
+I build SQL pipelines, models and dashboards that turn messy operational data into actionable insights — applying industrial engineering rigor to data science problems.
 
 I'm a restless reader: I devour papers on AI fairness, behavioral economics, psychology of decision-making, environmental engineering, legal informatics, and fitness science — whatever catches my attention today.
 
@@ -52,7 +52,7 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 - 📍 **Based in**: Lima, Perú
 - 🏢 **Target role**: Analista de Datos Junior / Practicante BI
 - 📊 **Daily driver**: Python (Pandas, scikit-learn, statsmodels), R (XGBoost, Stan/brms), TypeScript
-- 📚 **Learning now**: SQL and Power BI
+- 🗄️ **BI stack**: SQL (DuckDB: CTEs, window functions, star schema), Power BI (DAX), Looker Studio
 - 🧪 **Research interests**: AI ethics & fairness, decision neuroscience, behavioral economics, environmental sustainability, legal informatics, fitness science, ensemble methods for prediction
 - 📝 **Academic writing**: LaTeX (IEEE, APA 7), reproducible reports with DOI on Zenodo and [ResearchGate](https://www.researchgate.net/profile/Jharol-Vilca-Ramos) — see [Publications](#publications)
 
@@ -64,6 +64,7 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 
 | Project | Description | Status | Stack |
 |---|---|---|---|
+| `dashboard-demanda-delivery` | Star schema in DuckDB, 10 SQL marts, 17 data-quality rules and tests; Power BI (DAX) + public [Looker Studio](https://lookerstudio.google.com/reporting/26c68f6d-8127-45d0-81d8-99ef04342e32) · [DOI](https://doi.org/10.5281/zenodo.23753183) | ✅ v1.0.0 | SQL · DuckDB · Power BI · Looker Studio |
 | `demanda-delivery-v2` | Price elasticity of demand in food delivery (456K obs.): OLS, panel FE, IV, splines · [DOI](https://doi.org/10.5281/zenodo.23586040) | ✅ v3.3.0 | Python · statsmodels · linearmodels · LaTeX |
 | `A.N.D.R.E.` | Ensemble stacking predictor for football matches (World Cup 2026) | ⚡ Active | R · XGBoost · Stan/brms · plumber |
 | `dophamine` | Offline-first wellness app: nutrition, training & biometrics tracker with weekly insights | 🚀 v0.3.0 | TypeScript · React Native · SQLite |
@@ -82,6 +83,10 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 **Elasticidad precio-demanda en el servicio de delivery de comidas: evidencia desde datos transaccionales** (2026). Working paper, v3.3.0.
 Price elasticity of demand on a food delivery platform with 456,548 week × center × meal observations: OLS, two-way fixed effects, IV 2SLS, restricted cubic splines and quantile regression. Main finding: elasticity is not a single number — it varies with price level, category, week and identification strategy.
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23586040-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23586040) [![ResearchGate](https://img.shields.io/badge/ResearchGate-preprint-00CCBB?style=flat-square&logo=researchgate&logoColor=white)](https://www.researchgate.net/publication/416623085_Elasticidad_Precio-Demanda_en_el_Servicio_de_Delivery_de_Comidas_Evidencia_desde_Datos_Transaccionales) [![Code](https://img.shields.io/badge/code-demanda--delivery--v2-0d1117?style=flat-square&logo=github)](https://github.com/s7ex-j/demanda-delivery-v2)
+
+**Dashboard de demanda en delivery: SQL (DuckDB), Power BI y Looker Studio** (2026). Software, v1.0.0.
+Data layer and dashboards for the same 456,548-row dataset: star schema, 10 business queries with CTEs and window functions (ABC, cohorts, promotion index, price deciles), 17 quality rules that stop the pipeline, and tests that reconcile every figure with the study above.
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23753183-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23753183) [![Looker Studio](https://img.shields.io/badge/Looker_Studio-live_report-4285F4?style=flat-square&logo=looker&logoColor=white)](https://lookerstudio.google.com/reporting/26c68f6d-8127-45d0-81d8-99ef04342e32) [![Code](https://img.shields.io/badge/code-dashboard--demanda--delivery-0d1117?style=flat-square&logo=github)](https://github.com/s7ex-j/dashboard-demanda-delivery)
 
 **Informe Técnico: Caracterización Fisicoquímica de Suelos Urbanos del Parque Kennedy** (2026). Technical report.
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21695655-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.21695655) [![Code](https://img.shields.io/badge/repo-Informe--Tecnico--Parque--Kennedy-0d1117?style=flat-square&logo=github)](https://github.com/s7ex-j/Informe-Tecnico-Parque-Kennedy)
@@ -129,9 +134,12 @@ Right now, Andre is deep-diving into:
 
 <br><br>
 
-<sub>Learning now</sub><br>
+<sub>BI & data engineering</sub><br>
 <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQL">
+<img src="https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black" alt="DuckDB">
 <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI">
+<img src="https://img.shields.io/badge/Looker_Studio-4285F4?style=for-the-badge&logo=looker&logoColor=white" alt="Looker Studio">
+<img src="https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" alt="pytest">
 
 </div>
 
@@ -177,24 +185,33 @@ Right now, Andre is deep-diving into:
 
 <table>
 <tr>
-<td width="33%" align="center" valign="top">
+<td width="50%" align="center" valign="top">
 
-<a href="https://github.com/s7ex-j/A.N.D.R.E-Modelo-predictivo-mundiales" target="_blank" rel="noopener">
-<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-featured-0-dark.svg" width="480" alt="A.N.D.R.E.">
+<a href="https://github.com/s7ex-j/dashboard-demanda-delivery" target="_blank" rel="noopener">
+<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-featured-0-dark.svg" width="480" alt="Dashboard de demanda">
 </a>
 
 </td>
-<td width="33%" align="center" valign="top">
-
-<a href="https://github.com/s7ex-j/Dophamine" target="_blank" rel="noopener">
-<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-featured-1-dark.svg" width="480" alt="Dophamine">
-</a>
-
-</td>
-<td width="33%" align="center" valign="top">
+<td width="50%" align="center" valign="top">
 
 <a href="https://github.com/s7ex-j/demanda-delivery-v2" target="_blank" rel="noopener">
-<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-featured-2-dark.svg" width="480" alt="Elasticidad">
+<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-featured-1-dark.svg" width="480" alt="Elasticidad">
+</a>
+
+</td>
+</tr>
+<tr>
+<td width="50%" align="center" valign="top">
+
+<a href="https://github.com/s7ex-j/A.N.D.R.E-Modelo-predictivo-mundiales" target="_blank" rel="noopener">
+<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-featured-2-dark.svg" width="480" alt="A.N.D.R.E.">
+</a>
+
+</td>
+<td width="50%" align="center" valign="top">
+
+<a href="https://github.com/s7ex-j/Dophamine" target="_blank" rel="noopener">
+<img src="https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/card-featured-3-dark.svg" width="480" alt="Dophamine">
 </a>
 
 </td>
