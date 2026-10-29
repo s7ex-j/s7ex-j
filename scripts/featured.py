@@ -66,6 +66,11 @@ PROJECT_COLORS = {
         "secondary": "#D97706",
         "glow": "#FBBF24",
     },
+    "dashboard-demanda-delivery": {
+        "primary": "#22D3EE",
+        "secondary": "#0891B2",
+        "glow": "#67E8F9",
+    },
     "plantillas-latex-ieee-apa7": {
         "primary": "#3B82F6",
         "secondary": "#2563EB",

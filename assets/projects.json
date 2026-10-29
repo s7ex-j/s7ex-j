@@ -1,5 +1,31 @@
 [
   {
+    "repo": "dashboard-demanda-delivery",
+    "title": "Dashboard de demanda en delivery",
+    "description": "Esquema estrella, 10 marts SQL, Power BI y Looker. DOI.",
+    "icon": "📊",
+    "tech": [
+      "SQL",
+      "DuckDB",
+      "Power BI",
+      "Looker Studio",
+      "pytest"
+    ]
+  },
+  {
+    "repo": "demanda-delivery-v2",
+    "title": "Elasticidad precio-demanda en delivery",
+    "description": "456K obs.: OLS, panel FE, IV y splines. Informe con DOI.",
+    "icon": "📈",
+    "tech": [
+      "Python",
+      "statsmodels",
+      "linearmodels",
+      "SQLite",
+      "LaTeX"
+    ]
+  },
+  {
     "repo": "A.N.D.R.E-Modelo-predictivo-mundiales",
     "title": "A.N.D.R.E. — World Cup 2026 Stacking Predictor",
     "description": "Dixon-Coles + XGBoost + neural net + hierarchical Bayesian (Stan/brms), stacked via a glmnet meta-learner. Walk-forward validation, isotonic calibration, plumber API + live dashboard.",
@@ -22,19 +48,6 @@
       "React Native",
       "SQLite",
       "Offline-first"
-    ]
-  },
-  {
-    "repo": "demanda-delivery-v2",
-    "title": "Elasticidad precio-demanda en delivery",
-    "description": "456K obs.: OLS, panel FE, IV y splines. Informe con DOI.",
-    "icon": "📈",
-    "tech": [
-      "Python",
-      "statsmodels",
-      "linearmodels",
-      "SQLite",
-      "LaTeX"
     ]
   }
 ]
