@@ -5,7 +5,7 @@ Run:
     python scripts/featured.py --projects assets/projects.json --logos assets/source/project-logos --out assets
 
 Each project gets a 480x220 card with:
-- Project logo as background (referenced by URL, not embedded)
+- Project logo as background (embedded as a data URI so it renders inside <img>)
 - Project name + tagline
 - Tech stack badges
 - Entire card links to repo
@@ -84,23 +84,29 @@ def esc(s: str) -> str:
     return xml_escape(str(s), {'"': "&quot;"})
 
 
-def prepare_logo(path: Path, out_dir: Path, repo_name: str) -> str:
-    """Copy and resize logo to output directory, return absolute URL."""
-    logo_out = out_dir / f"logo-{repo_name}.png"
+def prepare_logo(path: Path, out_dir: Path, repo_name: str, bg: str = "#0D1628") -> str:
+    """Resize the logo onto a card-sized canvas and return it as an embedded data URI.
 
+    GitHub shows the cards through <img>, and browsers do not load external images
+    referenced inside an SVG rendered that way, so the logo must be inlined.
+    A copy is still written to out_dir for reference.
+    """
+    import base64
+    import io
+
+    scale = 2  # 2x for sharp rendering on high-DPI screens
+    w, h = CARD_W * scale, CARD_H * scale
     with Image.open(path) as img:
         img = img.convert("RGBA")
-        # Resize to cover card (maintain aspect, fill 480x220)
-        img.thumbnail((CARD_W, CARD_H), Image.Resampling.LANCZOS)
-        # Create canvas and center the image
-        canvas = Image.new("RGBA", (CARD_W, CARD_H), (0, 0, 0, 0))
-        x = (CARD_W - img.width) // 2
-        y = (CARD_H - img.height) // 2
-        canvas.paste(img, (x, y), img)
-        canvas.save(logo_out, format="PNG")
-
-    # Return absolute URL for raw.githubusercontent.com
-    return f"https://raw.githubusercontent.com/s7ex-j/s7ex-j/output/assets/logo-{repo_name}.png"
+        img.thumbnail((w, h), Image.Resampling.LANCZOS)
+        canvas = Image.new("RGBA", (w, h), bg)
+        canvas.paste(img, ((w - img.width) // 2, (h - img.height) // 2), img)
+        canvas.convert("RGB").resize((CARD_W, CARD_H), Image.Resampling.LANCZOS).save(
+            out_dir / f"logo-{repo_name}.png", format="PNG"
+        )
+        buf = io.BytesIO()
+        canvas.convert("RGB").save(buf, format="JPEG", quality=82, optimize=True)
+    return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode("ascii")
 
 
 def make_featured_card(
