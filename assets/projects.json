@@ -47,7 +47,8 @@
       "TypeScript",
       "React Native",
       "SQLite",
-      "Offline-first"
+      "Vitest",
+      "shadcn/ui"
     ]
   }
 ]
