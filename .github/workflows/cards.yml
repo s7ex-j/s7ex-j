@@ -9,6 +9,12 @@ on:
     branches:
       - main
 
+# cards.yml y radar.yml escriben en la rama output: se ejecutan de a uno para no
+# rechazarse mutuamente el push cuando ambos se disparan con el mismo commit.
+concurrency:
+  group: output-branch
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
