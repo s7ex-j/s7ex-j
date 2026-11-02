@@ -30,14 +30,14 @@ SEED = 314159
 
 ROWS = [
     ("Subject", "Andre"),
-    ("Role", "Aspiring Data Analyst Jr · BI"),
+    ("Role", "Data Analyst Jr · BI"),
     ("Origin", "Lima, Perú"),
     ("Education", "Industrial Eng + Data Science"),
-    ("Status", "Elasticity · Stacking · Learning SQL + Power BI"),
-    ("ToolChain", "VS Code · Git · Jupyter"),
+    ("Status", "Elasticity · SQL + BI dashboard · Stacking"),
+    ("Core.SQL", "DuckDB · SQLite · CTEs · window functions"),
     ("Core.Lang", "Python · R · TypeScript"),
     ("Core.Data", "Pandas · NumPy · scikit-learn · statsmodels"),
-    ("Core.Viz", "Matplotlib · Seaborn · Plotly"),
+    ("Core.BI", "Power BI · DAX · Looker Studio · Matplotlib"),
     ("Core.Model", "XGBoost · Stan/brms · glmnet"),
     ("Grid.Mail", "—"),
     ("Grid.LinkedIn", "/in/andre-vilca-ramos"),
