@@ -23,6 +23,8 @@
 
 <img src="https://komarev.com/ghpvc/?username=s7ex-j&label=profile%20views&color=93A9EE&style=flat" alt="profile views">
 
+<sub><b>English</b> · <a href="README.es.md">Español</a></sub>
+
 </div>
 
 ---
