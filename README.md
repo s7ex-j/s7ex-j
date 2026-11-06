@@ -64,11 +64,12 @@ I'm a restless reader: I devour papers on AI fairness, behavioral economics, psy
 
 | Project | Description | Status | Stack |
 |---|---|---|---|
-| `dashboard-demanda-delivery` | Star schema in DuckDB, 10 SQL marts, 17 data-quality rules and tests; Power BI (DAX) + public [Looker Studio](https://lookerstudio.google.com/reporting/26c68f6d-8127-45d0-81d8-99ef04342e32) · [DOI](https://doi.org/10.5281/zenodo.23753183) | ✅ v1.0.0 | SQL · DuckDB · Power BI · Looker Studio |
-| `demanda-delivery-v2` | Price elasticity of demand in food delivery (456K obs.): OLS, panel FE, IV, splines · [DOI](https://doi.org/10.5281/zenodo.23586040) | ✅ v3.3.0 | Python · statsmodels · linearmodels · LaTeX |
-| `A.N.D.R.E.` | Ensemble stacking predictor for football matches (World Cup 2026) | ⚡ Active | R · XGBoost · Stan/brms · plumber |
-| `dophamine` | Offline-first wellness app: nutrition, training & biometrics tracker with weekly insights · [site](https://s7ex-j.github.io/Dophamine/) · [web app](https://s7ex-j.github.io/Dophamine/app/) | 🚀 v0.3.0 | TypeScript · React Native · SQLite |
-| `LaTeX Templates` | Academic writing templates following IEEE and APA 7 standards | ✅ Maintenance | LaTeX · IEEE · APA 7 |
+| [`dashboard-demanda-delivery`](https://github.com/s7ex-j/dashboard-demanda-delivery) | Star schema in DuckDB, 10 SQL marts, 17 data-quality rules and tests; Power BI (DAX) + public [Looker Studio](https://lookerstudio.google.com/reporting/26c68f6d-8127-45d0-81d8-99ef04342e32) · [DOI](https://doi.org/10.5281/zenodo.23753183) | ✅ v1.0.0 | SQL · DuckDB · Power BI · Looker Studio |
+| [`demanda-delivery-v2`](https://github.com/s7ex-j/demanda-delivery-v2) | Price elasticity of demand in food delivery (456K obs.): OLS, panel FE, IV, splines · [DOI](https://doi.org/10.5281/zenodo.23586040) | ✅ v3.3.0 | Python · statsmodels · linearmodels · LaTeX |
+| [`A.N.D.R.E.`](https://github.com/s7ex-j/A.N.D.R.E-Modelo-predictivo-mundiales) | Ensemble stacking predictor for football matches (World Cup 2026) | ⚡ Active | R · XGBoost · Stan/brms · plumber |
+| [`dophamine`](https://github.com/s7ex-j/Dophamine) | Offline-first wellness app: nutrition, training & biometrics tracker with weekly insights · [site](https://s7ex-j.github.io/Dophamine/) · [web app](https://s7ex-j.github.io/Dophamine/app/) | 🚀 v0.3.0 | TypeScript · React Native · SQLite |
+| [`theyso`](https://github.com/s7ex-j/theyso) | Self-hosted remote control for Claude Code / OpenCode from your phone: local server + Flutter app, no cloud in between | 🚀 v0.1.2 | Python · WebSockets · Flutter · Tailscale |
+| [`LaTeX Templates`](https://github.com/s7ex-j/plantillas-latex-ieee-apa7) | Academic writing templates following IEEE and APA 7 standards | ✅ Maintenance | LaTeX · IEEE · APA 7 |
 
 </div>
 
